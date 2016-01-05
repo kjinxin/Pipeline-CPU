@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 07 09:33:07 2014
+Quartus II 32-bit Version : 12.0 Build 178 05/31/2012 SJ Full Version
+Revision Name : lab3_121220307_ARM32
+Top-level Entity Name : lab3_121220307_ARM32
+Family : Cyclone IV E
+Total logic elements : 704
+    Total combinational functions : 704
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 105
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

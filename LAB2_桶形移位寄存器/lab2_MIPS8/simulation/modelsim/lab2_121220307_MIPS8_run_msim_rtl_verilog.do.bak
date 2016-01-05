@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+F:/lab2_121220307_MIPS8 {F:/lab2_121220307_MIPS8/lab2_121220307_MIPS8.v}
+

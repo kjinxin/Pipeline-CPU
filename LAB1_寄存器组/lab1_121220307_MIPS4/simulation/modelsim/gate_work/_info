@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\lab1_121220307_MIPS4\simulation\modelsim
+vlab1_121220307_MIPS4
+Iz]oS`TQZ@bQcmI;KD`QG70
+V?Q]cKhkDKJ2OAcFSgCb`H2
+Z1 dF:\lab1_121220307_MIPS4\simulation\modelsim
+w1396847724
+8lab1_121220307_MIPS4_7_1200mv_85c_slow.vo
+Flab1_121220307_MIPS4_7_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+nlab1_121220307_@m@i@p@s4
+!s100 ^I9Ki4Y=LjC1@XEGTYSWU2
+!s85 0
+!s108 1396851400.620000
+!s107 lab1_121220307_MIPS4_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|lab1_121220307_MIPS4_7_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vlab1_121220307_MIPS4_vlg_tst
+!s100 ^jzcO0GnBcf5hAL3K6zEL2
+IRWDCkFi`EVnLDINGLLYX23
+VZSge]b41kZR6R3HmlIZjG3
+R1
+w1396849772
+8F:/lab1_121220307_MIPS4/simulation/modelsim/lab1_121220307_MIPS4.vt
+FF:/lab1_121220307_MIPS4/simulation/modelsim/lab1_121220307_MIPS4.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1396851401.058000
+!s107 F:/lab1_121220307_MIPS4/simulation/modelsim/lab1_121220307_MIPS4.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/lab1_121220307_MIPS4/simulation/modelsim|F:/lab1_121220307_MIPS4/simulation/modelsim/lab1_121220307_MIPS4.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/lab1_121220307_MIPS4/simulation/modelsim -O0
+nlab1_121220307_@m@i@p@s4_vlg_tst

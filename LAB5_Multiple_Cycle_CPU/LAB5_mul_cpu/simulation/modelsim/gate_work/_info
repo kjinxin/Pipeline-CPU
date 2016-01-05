@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\LAB5_121220307_mul_cpu\simulation\modelsim
+vLAB5_121220307_mul_cpu
+ID:M_BYbWaj18aB5UOZi7D0
+VG@9UYTR`bRK0cnKD=PF:Z0
+Z1 dF:\LAB5_121220307_mul_cpu\simulation\modelsim
+w1402973972
+8LAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo
+FLAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@l@a@b5_121220307_mul_cpu
+!s100 G4RSnVH44MhNJ:P4f?KoV1
+!s85 0
+!s108 1402977496.265000
+!s107 LAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|LAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vLAB5_121220307_mul_cpu_vlg_tst
+!s100 bVF6M0gLhDO<zUg`3f9]k1
+IIAYA^le<4NAIWLRe8?B=X2
+ViY<kAU7B5Z@dX]A_a86O>0
+R1
+w1402977479
+8F:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt
+FF:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1402977500.007000
+!s107 F:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/LAB5_121220307_mul_cpu/simulation/modelsim|F:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/LAB5_121220307_mul_cpu/simulation/modelsim -O0
+n@l@a@b5_121220307_mul_cpu_vlg_tst

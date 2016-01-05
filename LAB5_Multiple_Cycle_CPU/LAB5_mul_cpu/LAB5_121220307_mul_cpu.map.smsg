@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at LAB5_121220307_mul_cpu.v(751): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at LAB5_121220307_mul_cpu.v(953): always construct contains both blocking and non-blocking assignments

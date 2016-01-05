@@ -1,0 +1,221 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -7.432
+TNS   : -6596.115
+
+Type  : Slow 1200mV 85C Model Setup 'register_CPSR[0]'
+Slack : -5.017
+TNS   : -708.218
+
+Type  : Slow 1200mV 85C Model Setup 'Rn_r_addr[0]'
+Slack : -3.915
+TNS   : -103.596
+
+Type  : Slow 1200mV 85C Model Setup 'Rs_r_addr[0]'
+Slack : -3.619
+TNS   : -92.773
+
+Type  : Slow 1200mV 85C Model Setup 'Rm_r_addr[0]'
+Slack : -3.055
+TNS   : -80.920
+
+Type  : Slow 1200mV 85C Model Setup 'Rd_r_addr[0]'
+Slack : -1.534
+TNS   : -32.837
+
+Type  : Slow 1200mV 85C Model Hold 'Rd_r_addr[0]'
+Slack : -6.228
+TNS   : -160.635
+
+Type  : Slow 1200mV 85C Model Hold 'register_CPSR[0]'
+Slack : -5.231
+TNS   : -515.433
+
+Type  : Slow 1200mV 85C Model Hold 'Rm_r_addr[0]'
+Slack : -4.207
+TNS   : -116.809
+
+Type  : Slow 1200mV 85C Model Hold 'Rs_r_addr[0]'
+Slack : -4.199
+TNS   : -104.270
+
+Type  : Slow 1200mV 85C Model Hold 'Rn_r_addr[0]'
+Slack : -3.686
+TNS   : -86.109
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.279
+TNS   : -1.150
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1524.440
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Rd_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Rm_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Rn_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Rs_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'register_CPSR[0]'
+Slack : -1.316
+TNS   : -806.101
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -6.762
+TNS   : -5994.488
+
+Type  : Slow 1200mV 0C Model Setup 'register_CPSR[0]'
+Slack : -4.743
+TNS   : -672.022
+
+Type  : Slow 1200mV 0C Model Setup 'Rn_r_addr[0]'
+Slack : -3.573
+TNS   : -92.649
+
+Type  : Slow 1200mV 0C Model Setup 'Rs_r_addr[0]'
+Slack : -3.272
+TNS   : -82.603
+
+Type  : Slow 1200mV 0C Model Setup 'Rm_r_addr[0]'
+Slack : -2.664
+TNS   : -70.203
+
+Type  : Slow 1200mV 0C Model Setup 'Rd_r_addr[0]'
+Slack : -1.422
+TNS   : -30.102
+
+Type  : Slow 1200mV 0C Model Hold 'Rd_r_addr[0]'
+Slack : -5.537
+TNS   : -142.760
+
+Type  : Slow 1200mV 0C Model Hold 'register_CPSR[0]'
+Slack : -4.647
+TNS   : -457.560
+
+Type  : Slow 1200mV 0C Model Hold 'Rs_r_addr[0]'
+Slack : -3.820
+TNS   : -94.730
+
+Type  : Slow 1200mV 0C Model Hold 'Rm_r_addr[0]'
+Slack : -3.818
+TNS   : -106.847
+
+Type  : Slow 1200mV 0C Model Hold 'Rn_r_addr[0]'
+Slack : -3.285
+TNS   : -77.071
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.249
+TNS   : -0.746
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1524.440
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Rd_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Rm_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Rn_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Rs_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'register_CPSR[0]'
+Slack : -1.135
+TNS   : -688.005
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -3.239
+TNS   : -2837.750
+
+Type  : Fast 1200mV 0C Model Setup 'register_CPSR[0]'
+Slack : -2.242
+TNS   : -300.928
+
+Type  : Fast 1200mV 0C Model Setup 'Rn_r_addr[0]'
+Slack : -1.507
+TNS   : -37.143
+
+Type  : Fast 1200mV 0C Model Setup 'Rs_r_addr[0]'
+Slack : -1.363
+TNS   : -33.298
+
+Type  : Fast 1200mV 0C Model Setup 'Rm_r_addr[0]'
+Slack : -1.146
+TNS   : -27.348
+
+Type  : Fast 1200mV 0C Model Setup 'Rd_r_addr[0]'
+Slack : -0.623
+TNS   : -8.221
+
+Type  : Fast 1200mV 0C Model Hold 'Rd_r_addr[0]'
+Slack : -3.421
+TNS   : -89.263
+
+Type  : Fast 1200mV 0C Model Hold 'register_CPSR[0]'
+Slack : -2.855
+TNS   : -286.451
+
+Type  : Fast 1200mV 0C Model Hold 'Rm_r_addr[0]'
+Slack : -2.374
+TNS   : -67.059
+
+Type  : Fast 1200mV 0C Model Hold 'Rs_r_addr[0]'
+Slack : -2.341
+TNS   : -60.512
+
+Type  : Fast 1200mV 0C Model Hold 'Rn_r_addr[0]'
+Slack : -2.164
+TNS   : -52.143
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.327
+TNS   : -2.738
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -1271.642
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Rd_r_addr[0]'
+Slack : -3.000
+TNS   : -3.353
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Rs_r_addr[0]'
+Slack : -3.000
+TNS   : -3.072
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Rm_r_addr[0]'
+Slack : -3.000
+TNS   : -3.066
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Rn_r_addr[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'register_CPSR[0]'
+Slack : -0.485
+TNS   : -186.949
+
+------------------------------------------------------------

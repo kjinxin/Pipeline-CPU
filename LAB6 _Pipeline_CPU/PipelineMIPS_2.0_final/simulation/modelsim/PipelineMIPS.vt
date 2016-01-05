@@ -1,0 +1,149 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "06/15/2014 13:25:51"
+                                                                                
+// Verilog Test Bench template for design : PipelineMIPS
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module PipelineMIPS_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+// wires                                               
+wire [31:0]  ALU_B;
+wire [31:0]  ALU_out;
+wire BranchValid;
+wire [1:0]  C_A;
+wire [1:0]  C_B;
+wire EX_MEM_Flush;
+wire EX_MEM_Stall;
+wire [1:0]  ExtendI;
+wire ID_EX_Flush;
+wire ID_EX_Stall;
+wire ID_Jump;
+wire ID_MemWrite;
+wire IF_ID_Flush;
+wire IF_ID_RtRead;
+wire IF_ID_Stall;
+wire [31:0]  MEM_Addr;
+wire [31:0]  MEM_Branch_addr;
+wire [31:0]  MEM_DataOut;
+wire [3:0]  MEM_Op;
+wire [3:0]  MEM_WBType;
+wire MEM_WB_Flush;
+wire MEM_WB_Stall;
+wire [31:0]  MEM_data_in;
+wire Mem_WriteEn;
+wire OperandA_mux;
+wire OperandB_mux;
+wire [31:0]  PC;
+wire [1:0]  PCSrc;
+wire [4:0]  ReadReg1;
+wire [4:0]  ReadReg2;
+wire [31:0]  Readdata2;
+wire RegWrite;
+wire [4:0]  ShiftAmount;
+wire [31:0]  Shift_out;
+wire [31:0]  WB_MemData;
+wire [31:0]  WB_WBData;
+wire [3:0]  WB_WBType;
+wire [4:0]  WriteReg;
+wire fwd_MemReadID_EX;
+wire [4:0]  fwd_RdEX_MEM;
+wire [4:0]  fwd_RdID_EX;
+wire [4:0]  fwd_RdMEM_WB;
+wire fwd_RegWriteEX_MEM;
+wire fwd_RegWriteMEM_WB;
+wire [4:0]  fwd_RsID_EX;
+wire [4:0]  fwd_RsIF_ID;
+wire [4:0]  fwd_RtID_EX;
+wire [4:0]  fwd_RtIF_ID;
+
+// assign statements (if any)                          
+PipelineMIPS i1 (
+// port map - connection between master ports and signals/registers   
+	.ALU_B(ALU_B),
+	.ALU_out(ALU_out),
+	.BranchValid(BranchValid),
+	.C_A(C_A),
+	.C_B(C_B),
+	.EX_MEM_Flush(EX_MEM_Flush),
+	.EX_MEM_Stall(EX_MEM_Stall),
+	.ExtendI(ExtendI),
+	.ID_EX_Flush(ID_EX_Flush),
+	.ID_EX_Stall(ID_EX_Stall),
+	.ID_Jump(ID_Jump),
+	.ID_MemWrite(ID_MemWrite),
+	.IF_ID_Flush(IF_ID_Flush),
+	.IF_ID_RtRead(IF_ID_RtRead),
+	.IF_ID_Stall(IF_ID_Stall),
+	.MEM_Addr(MEM_Addr),
+	.MEM_Branch_addr(MEM_Branch_addr),
+	.MEM_DataOut(MEM_DataOut),
+	.MEM_Op(MEM_Op),
+	.MEM_WBType(MEM_WBType),
+	.MEM_WB_Flush(MEM_WB_Flush),
+	.MEM_WB_Stall(MEM_WB_Stall),
+	.MEM_data_in(MEM_data_in),
+	.Mem_WriteEn(Mem_WriteEn),
+	.OperandA_mux(OperandA_mux),
+	.OperandB_mux(OperandB_mux),
+	.PC(PC),
+	.PCSrc(PCSrc),
+	.ReadReg1(ReadReg1),
+	.ReadReg2(ReadReg2),
+	.Readdata2(Readdata2),
+	.RegWrite(RegWrite),
+	.ShiftAmount(ShiftAmount),
+	.Shift_out(Shift_out),
+	.WB_MemData(WB_MemData),
+	.WB_WBData(WB_WBData),
+	.WB_WBType(WB_WBType),
+	.WriteReg(WriteReg),
+	.clk(clk),
+	.fwd_MemReadID_EX(fwd_MemReadID_EX),
+	.fwd_RdEX_MEM(fwd_RdEX_MEM),
+	.fwd_RdID_EX(fwd_RdID_EX),
+	.fwd_RdMEM_WB(fwd_RdMEM_WB),
+	.fwd_RegWriteEX_MEM(fwd_RegWriteEX_MEM),
+	.fwd_RegWriteMEM_WB(fwd_RegWriteMEM_WB),
+	.fwd_RsID_EX(fwd_RsID_EX),
+	.fwd_RsIF_ID(fwd_RsIF_ID),
+	.fwd_RtID_EX(fwd_RtID_EX),
+	.fwd_RtIF_ID(fwd_RtIF_ID)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+clk<=0;
+// --> end                                             
+$display("Running testbench");    
+#5000;
+$stop();
+end                                                    
+always #10 clk<=~clk;
+                                             
+endmodule

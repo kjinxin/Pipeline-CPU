@@ -1,0 +1,1087 @@
+Analysis & Synthesis report for lab1_121220307_ARM32
+Mon Apr 07 16:35:28 2014
+Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |lab1_121220307_ARM32
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Apr 07 16:35:27 2014     ;
+; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Full Version ;
+; Revision Name                      ; lab1_121220307_ARM32                      ;
+; Top-level Entity Name              ; lab1_121220307_ARM32                      ;
+; Family                             ; Cyclone IV E                              ;
+; Total logic elements               ; 4,472                                     ;
+;     Total combinational functions  ; 4,028                                     ;
+;     Dedicated logic registers      ; 1,184                                     ;
+; Total registers                    ; 1184                                      ;
+; Total pins                         ; 431                                       ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++----------------------------------------------------------------------------+----------------------+----------------------+
+; Option                                                                     ; Setting              ; Default Value        ;
++----------------------------------------------------------------------------+----------------------+----------------------+
+; Device                                                                     ; EP4CE115F29C7        ;                      ;
+; Top-level entity name                                                      ; lab1_121220307_ARM32 ; lab1_121220307_ARM32 ;
+; Family name                                                                ; Cyclone IV E         ; Cyclone IV GX        ;
+; Use smart compilation                                                      ; Off                  ; Off                  ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                   ; On                   ;
+; Enable compact report table                                                ; Off                  ; Off                  ;
+; Restructure Multiplexers                                                   ; Auto                 ; Auto                 ;
+; Create Debugging Nodes for IP Cores                                        ; Off                  ; Off                  ;
+; Preserve fewer node names                                                  ; On                   ; On                   ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                  ; Off                  ;
+; Verilog Version                                                            ; Verilog_2001         ; Verilog_2001         ;
+; VHDL Version                                                               ; VHDL_1993            ; VHDL_1993            ;
+; State Machine Processing                                                   ; Auto                 ; Auto                 ;
+; Safe State Machine                                                         ; Off                  ; Off                  ;
+; Extract Verilog State Machines                                             ; On                   ; On                   ;
+; Extract VHDL State Machines                                                ; On                   ; On                   ;
+; Ignore Verilog initial constructs                                          ; Off                  ; Off                  ;
+; Iteration limit for constant Verilog loops                                 ; 5000                 ; 5000                 ;
+; Iteration limit for non-constant Verilog loops                             ; 250                  ; 250                  ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                   ; On                   ;
+; Infer RAMs from Raw Logic                                                  ; On                   ; On                   ;
+; Parallel Synthesis                                                         ; On                   ; On                   ;
+; DSP Block Balancing                                                        ; Auto                 ; Auto                 ;
+; NOT Gate Push-Back                                                         ; On                   ; On                   ;
+; Power-Up Don't Care                                                        ; On                   ; On                   ;
+; Remove Redundant Logic Cells                                               ; Off                  ; Off                  ;
+; Remove Duplicate Registers                                                 ; On                   ; On                   ;
+; Ignore CARRY Buffers                                                       ; Off                  ; Off                  ;
+; Ignore CASCADE Buffers                                                     ; Off                  ; Off                  ;
+; Ignore GLOBAL Buffers                                                      ; Off                  ; Off                  ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                  ; Off                  ;
+; Ignore LCELL Buffers                                                       ; Off                  ; Off                  ;
+; Ignore SOFT Buffers                                                        ; On                   ; On                   ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                  ; Off                  ;
+; Optimization Technique                                                     ; Balanced             ; Balanced             ;
+; Carry Chain Length                                                         ; 70                   ; 70                   ;
+; Auto Carry Chains                                                          ; On                   ; On                   ;
+; Auto Open-Drain Pins                                                       ; On                   ; On                   ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                  ; Off                  ;
+; Auto ROM Replacement                                                       ; On                   ; On                   ;
+; Auto RAM Replacement                                                       ; On                   ; On                   ;
+; Auto DSP Block Replacement                                                 ; On                   ; On                   ;
+; Auto Shift Register Replacement                                            ; Auto                 ; Auto                 ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                 ; Auto                 ;
+; Auto Clock Enable Replacement                                              ; On                   ; On                   ;
+; Strict RAM Replacement                                                     ; Off                  ; Off                  ;
+; Allow Synchronous Control Signals                                          ; On                   ; On                   ;
+; Force Use of Synchronous Clear Signals                                     ; Off                  ; Off                  ;
+; Auto RAM Block Balancing                                                   ; On                   ; On                   ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                  ; Off                  ;
+; Auto Resource Sharing                                                      ; Off                  ; Off                  ;
+; Allow Any RAM Size For Recognition                                         ; Off                  ; Off                  ;
+; Allow Any ROM Size For Recognition                                         ; Off                  ; Off                  ;
+; Allow Any Shift Register Size For Recognition                              ; Off                  ; Off                  ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                   ; On                   ;
+; Ignore translate_off and synthesis_off directives                          ; Off                  ; Off                  ;
+; Timing-Driven Synthesis                                                    ; On                   ; On                   ;
+; Report Parameter Settings                                                  ; On                   ; On                   ;
+; Report Source Assignments                                                  ; On                   ; On                   ;
+; Report Connectivity Checks                                                 ; On                   ; On                   ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                  ; Off                  ;
+; Synchronization Register Chain Length                                      ; 2                    ; 2                    ;
+; PowerPlay Power Optimization                                               ; Normal compilation   ; Normal compilation   ;
+; HDL message level                                                          ; Level2               ; Level2               ;
+; Suppress Register Optimization Related Messages                            ; Off                  ; Off                  ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                 ; 5000                 ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                 ; 5000                 ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                  ; 100                  ;
+; Clock MUX Protection                                                       ; On                   ; On                   ;
+; Auto Gated Clock Conversion                                                ; Off                  ; Off                  ;
+; Block Design Naming                                                        ; Auto                 ; Auto                 ;
+; SDC constraint protection                                                  ; Off                  ; Off                  ;
+; Synthesis Effort                                                           ; Auto                 ; Auto                 ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                   ; On                   ;
+; Analysis & Synthesis Message Level                                         ; Medium               ; Medium               ;
+; Disable Register Merging Across Hierarchies                                ; Auto                 ; Auto                 ;
+; Resource Aware Inference For Block RAM                                     ; On                   ; On                   ;
+; Synthesis Seed                                                             ; 1                    ; 1                    ;
++----------------------------------------------------------------------------+----------------------+----------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; lab1_121220307_ARM32.v           ; yes             ; User Verilog HDL File  ; F:/lab1_121220307_ARM32/lab1_121220307_ARM32.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4,472     ;
+;                                             ;           ;
+; Total combinational functions               ; 4028      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 3130      ;
+;     -- 3 input functions                    ; 828       ;
+;     -- <=2 input functions                  ; 70        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 4028      ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 1184      ;
+;     -- Dedicated logic registers            ; 1184      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 431       ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1184      ;
+; Total fan-out                               ; 19386     ;
+; Average fan-out                             ; 3.19      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |lab1_121220307_ARM32      ; 4028 (4028)       ; 1184 (1184)  ; 0           ; 0            ; 0       ; 0         ; 431  ; 0            ; |lab1_121220307_ARM32 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; Rn_out[0]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[1]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[2]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[3]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[4]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[5]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[6]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[7]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[8]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[9]$latch                                      ; Selector1185        ; yes                    ;
+; Rn_out[10]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[11]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[12]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[13]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[14]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[15]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[16]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[17]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[18]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[19]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[20]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[21]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[22]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[23]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[24]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[25]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[26]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[27]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[28]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[29]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[30]$latch                                     ; Selector1185        ; yes                    ;
+; Rn_out[31]$latch                                     ; Selector1185        ; yes                    ;
+; Rm_out[0]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[1]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[2]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[3]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[4]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[5]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[6]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[7]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[8]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[9]$latch                                      ; Selector1186        ; yes                    ;
+; Rm_out[10]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[11]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[12]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[13]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[14]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[15]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[16]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[17]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[18]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[19]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[20]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[21]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[22]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[23]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[24]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[25]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[26]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[27]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[28]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[29]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[30]$latch                                     ; Selector1186        ; yes                    ;
+; Rm_out[31]$latch                                     ; Selector1186        ; yes                    ;
+; Rs_out[0]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[1]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[2]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[3]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[4]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[5]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[6]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[7]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[8]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[9]$latch                                      ; Selector1187        ; yes                    ;
+; Rs_out[10]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[11]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[12]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[13]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[14]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[15]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[16]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[17]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[18]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[19]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[20]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[21]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[22]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[23]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[24]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[25]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[26]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[27]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[28]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[29]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[30]$latch                                     ; Selector1187        ; yes                    ;
+; Rs_out[31]$latch                                     ; Selector1187        ; yes                    ;
+; Rd_out[0]$latch                                      ; Selector1188        ; yes                    ;
+; Rd_out[1]$latch                                      ; Selector1188        ; yes                    ;
+; Rd_out[2]$latch                                      ; Selector1188        ; yes                    ;
+; Rd_out[3]$latch                                      ; Selector1188        ; yes                    ;
+; Number of user-specified and inferred latches = 229  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1184  ;
+; Number of registers using Synchronous Clear  ; 2     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1152  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                 ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |lab1_121220307_ARM32|register_CPSR[31]    ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_abt[14][2]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[14][2]  ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_svc[14][9]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[14][10] ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_svc[14][19] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[14][21] ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_irq[14][29] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[14][24] ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_abt[13][3]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[13][3]  ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_abt[13][12] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[13][10] ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_abt[13][22] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[13][19] ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |lab1_121220307_ARM32|register_irq[13][26] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[13][24] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[12][6]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[12][9]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[12][19] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[12][24] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[11][4]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[11][11] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[11][19] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[11][26] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[10][6]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[10][13] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[10][21] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[10][27] ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[9][4]   ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[9][13]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[9][19]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[9][31]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[8][4]   ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[8][10]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[8][20]  ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; |lab1_121220307_ARM32|register_fiq[8][29]  ;                            ;
+; 34:1               ; 2 bits    ; 44 LEs        ; 6 LEs                ; 38 LEs                 ; |lab1_121220307_ARM32|register_ge[15][0]   ;                            ;
+; 34:1               ; 6 bits    ; 132 LEs       ; 12 LEs               ; 120 LEs                ; |lab1_121220307_ARM32|register_ge[15][5]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 16 LEs               ; 160 LEs                ; |lab1_121220307_ARM32|register_ge[15][15]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 16 LEs               ; 160 LEs                ; |lab1_121220307_ARM32|register_ge[15][16]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 16 LEs               ; 160 LEs                ; |lab1_121220307_ARM32|register_ge[15][24]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[7][1]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[7][15]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[7][19]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[7][26]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[6][0]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[6][13]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[6][18]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[6][24]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[5][0]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[5][8]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[5][19]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[5][24]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[4][3]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[4][13]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[4][19]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[4][25]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[3][2]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[3][11]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[3][17]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[3][30]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[2][4]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[2][13]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[2][19]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[2][25]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[1][0]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[1][11]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[1][19]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[1][30]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[0][2]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[0][11]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[0][17]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[0][24]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[14][7]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[14][15]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[14][19]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[14][26]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[13][0]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[13][12]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[13][21]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[13][26]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[12][3]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[12][9]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[12][16]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[12][27]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[11][6]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[11][14]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[11][22]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[11][24]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[10][2]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[10][8]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[10][18]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[10][30]  ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[9][6]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[9][12]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[9][16]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[9][25]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[8][0]    ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[8][13]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[8][22]   ;                            ;
+; 34:1               ; 8 bits    ; 176 LEs       ; 8 LEs                ; 168 LEs                ; |lab1_121220307_ARM32|register_ge[8][26]   ;                            ;
+; 32:1               ; 4 bits    ; 84 LEs        ; 12 LEs               ; 72 LEs                 ; |lab1_121220307_ARM32|Selector1188         ;                            ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; |lab1_121220307_ARM32|Selector530          ;                            ;
+; 31:1               ; 32 bits   ; 640 LEs       ; 640 LEs              ; 0 LEs                  ; |lab1_121220307_ARM32|Selector691          ;                            ;
+; 31:1               ; 32 bits   ; 640 LEs       ; 640 LEs              ; 0 LEs                  ; |lab1_121220307_ARM32|Selector695          ;                            ;
+; 31:1               ; 32 bits   ; 640 LEs       ; 640 LEs              ; 0 LEs                  ; |lab1_121220307_ARM32|Selector732          ;                            ;
+; 31:1               ; 32 bits   ; 640 LEs       ; 640 LEs              ; 0 LEs                  ; |lab1_121220307_ARM32|Selector775          ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------------------------------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |lab1_121220307_ARM32 ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                              ;
+; addr_width     ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:50     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.0 Build 178 05/31/2012 SJ Full Version
+    Info: Processing started: Mon Apr 07 16:34:30 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab1_121220307_ARM32 -c lab1_121220307_ARM32
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file lab1_121220307_arm32.v
+    Info (12023): Found entity 1: lab1_121220307_ARM32
+Warning (10222): Verilog HDL Parameter Declaration warning at lab1_121220307_ARM32.v(28): Parameter Declaration in module "lab1_121220307_ARM32" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Info (12127): Elaborating entity "lab1_121220307_ARM32" for the top level hierarchy
+Warning (10270): Verilog HDL Case Statement warning at lab1_121220307_ARM32.v(245): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "Rn_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "Rm_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "Rs_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "Rd_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "PC_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "CPSR_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "Mode_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at lab1_121220307_ARM32.v(245): inferring latch(es) for variable "SPSR_out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "SPSR_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "SPSR_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Mode_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Mode_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Mode_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Mode_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Mode_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "CPSR_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "PC_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rd_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rs_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rm_out[31]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[0]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[1]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[2]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[3]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[4]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[5]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[6]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[7]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[8]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[9]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[10]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[11]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[12]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[13]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[14]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[15]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[16]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[17]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[18]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[19]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[20]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[21]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[22]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[23]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[24]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[25]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[26]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[27]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[28]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[29]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[30]" at lab1_121220307_ARM32.v(245)
+Info (10041): Inferred latch for "Rn_out[31]" at lab1_121220307_ARM32.v(245)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Mode_out[0]$latch" merged with LATCH primitive "CPSR_out[0]$latch"
+    Info (13026): Duplicate LATCH primitive "Mode_out[1]$latch" merged with LATCH primitive "CPSR_out[1]$latch"
+    Info (13026): Duplicate LATCH primitive "Mode_out[2]$latch" merged with LATCH primitive "CPSR_out[2]$latch"
+    Info (13026): Duplicate LATCH primitive "Mode_out[3]$latch" merged with LATCH primitive "CPSR_out[3]$latch"
+    Info (13026): Duplicate LATCH primitive "Mode_out[4]$latch" merged with LATCH primitive "CPSR_out[4]$latch"
+Warning (13012): Latch Rn_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[8]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[9]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[10]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[11]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[12]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[0]
+Warning (13012): Latch Rn_out[13]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[14]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[15]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[16]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[0]
+Warning (13012): Latch Rn_out[17]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[18]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[19]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[20]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[0]
+Warning (13012): Latch Rn_out[21]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[22]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[23]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[24]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[0]
+Warning (13012): Latch Rn_out[25]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[26]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[27]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[28]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[0]
+Warning (13012): Latch Rn_out[29]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rn_out[30]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rn_r_addr[1]
+Warning (13012): Latch Rn_out[31]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[8]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[9]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[10]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[11]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[12]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[0]
+Warning (13012): Latch Rm_out[13]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[14]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[15]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[16]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[0]
+Warning (13012): Latch Rm_out[17]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[18]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[19]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[20]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[0]
+Warning (13012): Latch Rm_out[21]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[22]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[23]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[24]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[0]
+Warning (13012): Latch Rm_out[25]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[26]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[27]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[28]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[0]
+Warning (13012): Latch Rm_out[29]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rm_out[30]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rm_r_addr[1]
+Warning (13012): Latch Rm_out[31]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[8]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[9]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[10]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[11]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[12]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[0]
+Warning (13012): Latch Rs_out[13]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[14]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[15]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[16]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[0]
+Warning (13012): Latch Rs_out[17]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[18]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[19]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[20]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[0]
+Warning (13012): Latch Rs_out[21]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[22]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[23]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[24]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[0]
+Warning (13012): Latch Rs_out[25]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[26]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[27]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[28]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[0]
+Warning (13012): Latch Rs_out[29]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rs_out[30]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rs_r_addr[1]
+Warning (13012): Latch Rs_out[31]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[8]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[9]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[10]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[11]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[12]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[0]
+Warning (13012): Latch Rd_out[13]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[14]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[15]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[16]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[0]
+Warning (13012): Latch Rd_out[17]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[18]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[19]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[20]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[0]
+Warning (13012): Latch Rd_out[21]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[22]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[23]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[24]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[0]
+Warning (13012): Latch Rd_out[25]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[26]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[27]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[28]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[0]
+Warning (13012): Latch Rd_out[29]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch Rd_out[30]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Rd_r_addr[1]
+Warning (13012): Latch Rd_out[31]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch CPSR_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[0]
+Warning (13012): Latch CPSR_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[1]
+Warning (13012): Latch CPSR_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[2]
+Warning (13012): Latch CPSR_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch CPSR_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[4]
+Warning (13012): Latch SPSR_out[0]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[1]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[2]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[3]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[4]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[5]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[8]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[9]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[10]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[11]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[12]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[13]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[14]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[15]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[16]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[17]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[18]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[19]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[20]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[21]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[22]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[23]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[24]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[25]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[26]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[27]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[28]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[29]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[30]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Warning (13012): Latch SPSR_out[31]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal register_CPSR[3]
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file F:/lab1_121220307_ARM32/lab1_121220307_ARM32.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "PC_in[0]"
+    Warning (15610): No output dependent on input pin "PC_in[1]"
+Info (21057): Implemented 4967 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 202 input pins
+    Info (21059): Implemented 229 output pins
+    Info (21061): Implemented 4536 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 343 warnings
+    Info: Peak virtual memory: 359 megabytes
+    Info: Processing ended: Mon Apr 07 16:35:28 2014
+    Info: Elapsed time: 00:00:58
+    Info: Total CPU time (on all processors): 00:00:46
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/lab1_121220307_ARM32/lab1_121220307_ARM32.map.smsg.
+
+

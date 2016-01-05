@@ -1,0 +1,153 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/07/2014 11:41:03"
+                                                                                
+// Verilog Test Bench template for design : lab1_121220307_MIPS32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 us/ 1 ps
+module lab1_121220307_MIPS32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [3:0] Rd_byte_w_en;
+reg clk;
+reg [4:0] rd_addr;
+reg [31:0] rd_in;
+reg [4:0] rs_addr;
+reg [4:0] rt_addr;
+// wires                                               
+wire [31:0]  rs_out;
+wire [31:0]  rt_out;
+
+// assign statements (if any)                          
+lab1_121220307_MIPS32 i1 (
+// port map - connection between master ports and signals/registers   
+	.Rd_byte_w_en(Rd_byte_w_en),
+	.clk(clk),
+	.rd_addr(rd_addr),
+	.rd_in(rd_in),
+	.rs_addr(rs_addr),
+	.rs_out(rs_out),
+	.rt_addr(rt_addr),
+	.rt_out(rt_out)
+);
+always
+#10 clk=~clk;                                                  
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin  
+clk=0;
+// write in all the 32 registers                         
+rd_addr=5'h00; Rd_byte_w_en=4'b0000; rd_in=32'h9837abcd; #25
+rd_addr=5'h01; Rd_byte_w_en=4'b0000; rd_in=32'h9388afe2; #25 
+rd_addr=5'h02; Rd_byte_w_en=4'b0000; rd_in=32'habde98ac; #25 
+rd_addr=5'h03; Rd_byte_w_en=4'b0000; rd_in=32'hfafafafa; #25 
+rd_addr=5'h04; Rd_byte_w_en=4'b0000; rd_in=32'hcdfe9879; #25 
+rd_addr=5'h05; Rd_byte_w_en=4'b0000; rd_in=32'h98798098; #25
+rd_addr=5'h06; Rd_byte_w_en=4'b0000; rd_in=32'h47709087; #25
+rd_addr=5'h07; Rd_byte_w_en=4'b0000; rd_in=32'hafe7acd8; #25 
+rd_addr=5'h08; Rd_byte_w_en=4'b0000; rd_in=32'h9879aebe; #25 
+rd_addr=5'h09; Rd_byte_w_en=4'b0000; rd_in=32'ha9876435; #25 
+rd_addr=5'h0a; Rd_byte_w_en=4'b0000; rd_in=32'hecd68792; #25  
+rd_addr=5'h0b; Rd_byte_w_en=4'b0000; rd_in=32'h12638713; #25
+rd_addr=5'h0c; Rd_byte_w_en=4'b0000; rd_in=32'hbed7987f; #25
+rd_addr=5'h0d; Rd_byte_w_en=4'b0000; rd_in=32'h87687afe; #25 
+rd_addr=5'h0e; Rd_byte_w_en=4'b0000; rd_in=32'hfedc876a; #25 
+rd_addr=5'h0f; Rd_byte_w_en=4'b0000; rd_in=32'h98709aed; #25
+rd_addr=5'h10; Rd_byte_w_en=4'b0000; rd_in=32'hfedca87b; #25
+rd_addr=5'h11; Rd_byte_w_en=4'b0000; rd_in=32'h23798123; #25 
+rd_addr=5'h12; Rd_byte_w_en=4'b0000; rd_in=32'hbed987ac; #25 
+rd_addr=5'h13; Rd_byte_w_en=4'b0000; rd_in=32'h089ae12c; #25 
+rd_addr=5'h14; Rd_byte_w_en=4'b0000; rd_in=32'h012983ff; #25 
+rd_addr=5'h15; Rd_byte_w_en=4'b0000; rd_in=32'hcbb87133; #25
+rd_addr=5'h16; Rd_byte_w_en=4'b0000; rd_in=32'h01809a87; #25
+rd_addr=5'h17; Rd_byte_w_en=4'b0000; rd_in=32'hffccddee; #25 
+rd_addr=5'h18; Rd_byte_w_en=4'b0000; rd_in=32'h76821517; #25 
+rd_addr=5'h19; Rd_byte_w_en=4'b0000; rd_in=32'h98809810; #25 
+rd_addr=5'h1a; Rd_byte_w_en=4'b0000; rd_in=32'h8762139a; #25 
+rd_addr=5'h1b; Rd_byte_w_en=4'b0000; rd_in=32'hbde876a8; #25
+rd_addr=5'h1c; Rd_byte_w_en=4'b0000; rd_in=32'h11431301; #25
+rd_addr=5'h1d; Rd_byte_w_en=4'b0000; rd_in=32'h197398ae; #25 
+rd_addr=5'h1e; Rd_byte_w_en=4'b0000; rd_in=32'h9837aedc; #25 
+rd_addr=5'h1f; Rd_byte_w_en=4'b0000; rd_in=32'h76576890; #25 
+
+// read from all 32 registers
+rs_addr=5'h00; #25 
+rs_addr=5'h01; #25
+rs_addr=5'h02; #25
+rs_addr=5'h03; #25 
+rs_addr=5'h04; #25 
+rs_addr=5'h05; #25
+rs_addr=5'h06; #25
+rs_addr=5'h07; #25
+rs_addr=5'h08; #25 
+rs_addr=5'h09; #25
+rs_addr=5'h0a; #25
+rs_addr=5'h0b; #25 
+rs_addr=5'h0c; #25 
+rs_addr=5'h0d; #25
+rs_addr=5'h0e; #25
+rs_addr=5'h0f; #25 
+rs_addr=5'h10; #25 
+rs_addr=5'h11; #25
+rs_addr=5'h12; #25
+rs_addr=5'h13; #25 
+rs_addr=5'h14; #25 
+rs_addr=5'h15; #25
+rs_addr=5'h16; #25
+rs_addr=5'h17; #25
+rs_addr=5'h18; #25 
+rs_addr=5'h19; #25
+rs_addr=5'h1a; #25
+rs_addr=5'h1b; #25 
+rs_addr=5'h1c; #25 
+rs_addr=5'h1d; #25
+rs_addr=5'h1e; #25
+rs_addr=5'h1f; #25
+
+// use the write enable from every byte
+rs_addr=5'h1c; rd_addr=5'h1c; Rd_byte_w_en=4'b0000; rd_in=32'h00000000; #25
+rs_addr=5'h1c; rd_addr=5'h1c; Rd_byte_w_en=4'b1110; rd_in=32'h29843798; #25
+rs_addr=5'h1c; rd_addr=5'h1c; Rd_byte_w_en=4'b1101; rd_in=32'habcedf32; #25
+rs_addr=5'h1c; rd_addr=5'h1c; Rd_byte_w_en=4'b1011; rd_in=32'hfed98bce; #25
+rs_addr=5'h1c; rd_addr=5'h1c; Rd_byte_w_en=4'b0111; rd_in=32'h02828734; #25
+                                                
+// read at the same tiem with write
+rs_addr=5'h0f; rd_addr=5'h0f; Rd_byte_w_en=4'b0000; rd_in=32'h8768aedc; #25
+rs_addr=5'h10; rd_addr=5'h10; Rd_byte_w_en=4'b0000; rd_in=32'h98dca98d; #25
+rs_addr=5'h11; rd_addr=5'h11; Rd_byte_w_en=4'b0000; rd_in=32'hffccddee; #25 
+rs_addr=5'h12; rd_addr=5'h12; Rd_byte_w_en=4'b0000; rd_in=32'hcbb87133; #25 
+rs_addr=5'h13; rd_addr=5'h13; Rd_byte_w_en=4'b0000; rd_in=32'h01809a87; #25 
+rs_addr=5'h14; rd_addr=5'h14; Rd_byte_w_en=4'b0000; rd_in=32'hed2983ff; #25 
+rs_addr=5'h15; rd_addr=5'h15; Rd_byte_w_en=4'b0000; rd_in=32'hcbb87133; #25
+rs_addr=5'h16; rd_addr=5'h16; Rd_byte_w_en=4'b0000; rd_in=32'h98809a87; #25
+rs_addr=5'h17; rd_addr=5'h17; Rd_byte_w_en=4'b0000; rd_in=32'h012983ff; #25                                                     
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\lab3_121220307_ARM32\simulation\modelsim
+vlab3_121220307_ARM32
+I^Rilj=8S[]`m;^WMLf3lW2
+VKmFWif]oizUmn`Uok^2ZL3
+Z1 dF:\lab3_121220307_ARM32\simulation\modelsim
+w1396834494
+8lab3_121220307_ARM32_7_1200mv_85c_slow.vo
+Flab3_121220307_ARM32_7_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+nlab3_121220307_@a@r@m32
+!s100 ][3?M^8TNYkC[4?OSnkeT1
+!s85 0
+!s108 1396834556.694000
+!s107 lab3_121220307_ARM32_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|lab3_121220307_ARM32_7_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vlab3_121220307_ARM32_vlg_tst
+!s100 D<?]k;2]GYij0zo3dZTNC2
+IUD1>o_bO[H[WC8Q[J6AXJ2
+Vnf=[OdUhzf_jf85^GEFXk3
+R1
+w1396800156
+8F:/lab3_121220307_ARM32/simulation/modelsim/lab3_121220307_ARM32.vt
+FF:/lab3_121220307_ARM32/simulation/modelsim/lab3_121220307_ARM32.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1396834557.381000
+!s107 F:/lab3_121220307_ARM32/simulation/modelsim/lab3_121220307_ARM32.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/lab3_121220307_ARM32/simulation/modelsim|F:/lab3_121220307_ARM32/simulation/modelsim/lab3_121220307_ARM32.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/lab3_121220307_ARM32/simulation/modelsim -O0
+nlab3_121220307_@a@r@m32_vlg_tst

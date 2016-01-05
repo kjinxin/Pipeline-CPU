@@ -1,0 +1,58 @@
+# Reading D:/Program Files/Altera/modelsim_ase/tcl/vsim/pref.tcl 
+# do single_cpu_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying D:\Program Files\Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Program Files\Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {single_cpu_7_1200mv_85c_slow.vo}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module single_cpu
+# 
+# Top level modules:
+# 	single_cpu
+# 
+# vlog -vlog01compat -work work +incdir+F:/LAB4_121220307_single_cpu/simulation/modelsim {F:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module single_cpu_vlg_tst
+# 
+# Top level modules:
+# 	single_cpu_vlg_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  single_cpu_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps single_cpu_vlg_tst 
+# Loading work.single_cpu_vlg_tst
+# Loading work.single_cpu
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# SDF 10.0d Compiler 2012.01 Jan 18 2012
+# 
+# Loading instances from single_cpu_7_1200mv_85c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from single_cpu_7_1200mv_85c_v_slow.sdo
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 1
+#           Attempting to use alternate WLF file "./wlftvixw99".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvixw99
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /single_cpu_vlg_tst File: F:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit 
+# Simulation stop requested.

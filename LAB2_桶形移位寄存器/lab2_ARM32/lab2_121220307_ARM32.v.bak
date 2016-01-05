@@ -1,0 +1,45 @@
+module lab2_121220307_ARM
+(
+	input [31:0] Shift_in,  // the data that we input
+	input [4:0] Shift_amount, // the amount that we want to shift the data
+	input [1:0] Shift_op, // the style that we want to use to shift
+	input Carry_flag,  // the carry flag
+	output [31:0] Shift_out,  // the data that after we shift the input data
+	output Shift_carry_out   // the carry flag that we want to output
+)
+
+always @ (*)
+begin
+	case (Shift_op)
+		2'b00:
+			begin
+				Shift_out=Shift_in<<Shift_amount;
+			end
+		2'b01:
+			begin
+				Shift_out=Shift_in>>Shift_amount;
+				if (Shift_amount==5'b00000)
+				Shift_out=32'h00000000;
+			end
+		2'b10:
+			begin
+				for (i=31; i>=0; i=i-1)
+				begin
+					if (i>31-Shift_amount)
+						Shift_out[i]=Shift_in[31];
+					else
+						Shift_out[i]=Shift_in[i+Shift_amount];
+				end
+				if (Shift_amount==5'b00000)
+				if (Shift_in[31]==0)
+				Shift_out=32'h00000000;
+				else
+				Shift_out=32'h11111111;
+				
+			end
+		2'b11:
+			begin
+			end
+	endcase
+end
+endmodule

@@ -1,0 +1,170 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/07/2014 15:07:32"
+                                                                                
+// Verilog Test Bench template for design : lab1_121220307_ARM32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 us/ 1 ps
+module lab1_121220307_ARM32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [3:0] CPSR_byte_w_en;
+reg [31:0] CPSR_in;
+reg [31:0] PC_in;
+reg [3:0] Rd_byte_w_en;
+reg [31:0] Rd_in;
+reg [3:0] Rd_r_addr;
+reg [3:0] Rd_w_addr;
+reg [3:0] Rm_r_addr;
+reg [3:0] Rn_byte_w_en;
+reg [31:0] Rn_in;
+reg [3:0] Rn_r_addr;
+reg [3:0] Rn_w_addr;
+reg [3:0] Rs_r_addr;
+reg [3:0] SPSR_byte_w_en;
+reg [31:0] SPSR_in;
+reg clk;
+reg rst;
+// wires                                               
+wire [31:0]  CPSR_out;
+wire [4:0]  Mode_out;
+wire [31:0]  PC_out;
+wire [31:0]  Rd_out;
+wire [31:0]  Rm_out;
+wire [31:0]  Rn_out;
+wire [31:0]  Rs_out;
+wire [31:0]  SPSR_out;
+
+// assign statements (if any)                          
+lab1_121220307_ARM32 i1 (
+// port map - connection between master ports and signals/registers   
+	.CPSR_byte_w_en(CPSR_byte_w_en),
+	.CPSR_in(CPSR_in),
+	.CPSR_out(CPSR_out),
+	.Mode_out(Mode_out),
+	.PC_in(PC_in),
+	.PC_out(PC_out),
+	.Rd_byte_w_en(Rd_byte_w_en),
+	.Rd_in(Rd_in),
+	.Rd_out(Rd_out),
+	.Rd_r_addr(Rd_r_addr),
+	.Rd_w_addr(Rd_w_addr),
+	.Rm_out(Rm_out),
+	.Rm_r_addr(Rm_r_addr),
+	.Rn_byte_w_en(Rn_byte_w_en),
+	.Rn_in(Rn_in),
+	.Rn_out(Rn_out),
+	.Rn_r_addr(Rn_r_addr),
+	.Rn_w_addr(Rn_w_addr),
+	.Rs_out(Rs_out),
+	.Rs_r_addr(Rs_r_addr),
+	.SPSR_byte_w_en(SPSR_byte_w_en),
+	.SPSR_in(SPSR_in),
+	.SPSR_out(SPSR_out),
+	.clk(clk),
+	.rst(rst)
+);
+                                                    
+always 
+#10 clk=~clk;                                                   
+always                                                                
+begin                                                  
+clk=0;
+// user modes 
+// write in all the general registers
+Rn_w_addr<=4'h0; Rn_in<=32'h97349878; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h1; Rn_in<=32'habcdef55; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h2; Rn_in<=32'h873987ab; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h3; Rn_in<=32'h983bedfa; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h4; Rn_in<=32'h98879aef; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h5; Rn_in<=32'hfedcb98d; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h6; Rn_in<=32'h97abe67b; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h7; Rn_in<=32'h12312413; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'h8; Rn_in<=32'hbed98acd; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_w_addr<=4'h9; Rn_in<=32'h98787989; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'ha; Rn_in<=32'h03248024; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'hb; Rn_in<=32'hb98a987f; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'hc; Rn_in<=32'h7f8eb76c; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'hd; Rn_in<=32'h98779edd; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25    
+Rn_w_addr<=4'he; Rn_in<=32'h98809abc; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25
+Rn_w_addr<=4'hf; Rn_in<=32'hedbc7898; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'h0; rst<=0; #25 
+// read from all the general registers
+Rn_r_addr<=4'h0; #25
+Rn_r_addr<=4'h1; #25 
+Rn_r_addr<=4'h2; #25
+Rn_r_addr<=4'h3; #25
+Rn_r_addr<=4'h4; #25
+Rn_r_addr<=4'h5; #25 
+Rn_r_addr<=4'h6; #25
+Rn_r_addr<=4'h7; #25
+Rn_r_addr<=4'h8; #25
+Rn_r_addr<=4'h9; #25 
+Rn_r_addr<=4'ha; #25
+Rn_r_addr<=4'hb; #25
+Rn_r_addr<=4'hc; #25
+Rn_r_addr<=4'hd; #25 
+Rn_r_addr<=4'he; #25
+Rn_r_addr<=4'hf; #25
+// write in by each control byte
+Rn_r_addr<=4'h9; Rn_w_addr<=4'h9; Rn_in<=32'h2983749b; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'b1110; rst<=0; #25 
+Rn_r_addr<=4'h9; Rn_w_addr<=4'h9; Rn_in<=32'habed987e; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'b1101; rst<=0; #25 
+Rn_r_addr<=4'h9; Rn_w_addr<=4'h9; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'b1011; rst<=0; #25 
+Rn_r_addr<=4'h9; Rn_w_addr<=4'h9; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'h0; Rn_byte_w_en<=4'b0111; rst<=0; #25
+// read at the same time with write
+Rn_r_addr<=4'h4; Rn_w_addr<=4'h4; Rn_in<=32'h2983749b; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'h5; Rn_w_addr<=4'h5; Rn_in<=32'habed987e; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'h6; Rn_w_addr<=4'h6; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000010; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+
+// fiq modes
+Rn_r_addr<=4'hf; Rn_w_addr<=4'hf; Rn_in<=32'h2983749b; CPSR_in<=32'h00000011; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hd; Rn_w_addr<=4'hd; Rn_in<=32'habed987e; CPSR_in<=32'h00000011; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hc; Rn_w_addr<=4'hc; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000011; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000011; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+// svc modes
+Rn_r_addr<=4'hf; Rn_w_addr<=4'hf; Rn_in<=32'h2983749b; CPSR_in<=32'h00000012; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hd; Rn_w_addr<=4'hd; Rn_in<=32'habed987e; CPSR_in<=32'h00000012; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hc; Rn_w_addr<=4'hc; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000012; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000012; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+// abt modes
+Rn_r_addr<=4'hf; Rn_w_addr<=4'hf; Rn_in<=32'h2983749b; CPSR_in<=32'h00000013; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hd; Rn_w_addr<=4'hd; Rn_in<=32'habed987e; CPSR_in<=32'h00000013; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hc; Rn_w_addr<=4'hc; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000013; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000013; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+// irq modes
+Rn_r_addr<=4'hf; Rn_w_addr<=4'hf; Rn_in<=32'h2983749b; CPSR_in<=32'h00000017; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hd; Rn_w_addr<=4'hd; Rn_in<=32'habed987e; CPSR_in<=32'h00000017; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hc; Rn_w_addr<=4'hc; Rn_in<=32'h9874abdf; CPSR_in<=32'h00000017; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h00000017; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+// und modes                                                 
+Rn_r_addr<=4'hf; Rn_w_addr<=4'hf; Rn_in<=32'h2983749b; CPSR_in<=32'h0000001b; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hd; Rn_w_addr<=4'hd; Rn_in<=32'habed987e; CPSR_in<=32'h0000001b; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'hc; Rn_w_addr<=4'hc; Rn_in<=32'h9874abdf; CPSR_in<=32'h0000001b; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25 
+Rn_r_addr<=4'ha; Rn_w_addr<=4'ha; Rn_in<=32'hed7edfbc; CPSR_in<=32'h0000001b; CPSR_byte_w_en<=4'b0000; Rn_byte_w_en<=4'h0; rst<=0; #25
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

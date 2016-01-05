@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\LAB4_121220307_single_cpu\simulation\modelsim
+vsingle_cpu
+Il=oSOYhn15AHV_EOa@KgQ3
+V;W5]CCHOT[Uz:SbloZb841
+Z1 dF:\LAB4_121220307_single_cpu\simulation\modelsim
+w1402165538
+8single_cpu_7_1200mv_85c_slow.vo
+Fsingle_cpu_7_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!s100 @TYGjj;L4zcoBZmcla2[M1
+!s85 0
+!s108 1402165859.759000
+!s107 single_cpu_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|single_cpu_7_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vsingle_cpu_vlg_tst
+!s100 VGo9NAJMo@=dak_kkfQ=T2
+IW<?]22C?fP<c0>mf<Vo7`2
+VooDiAT_8lP[?A9ST6^?nN2
+R1
+w1398063192
+8F:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt
+FF:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1402165862.338000
+!s107 F:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/LAB4_121220307_single_cpu/simulation/modelsim|F:/LAB4_121220307_single_cpu/simulation/modelsim/single_cpu.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/LAB4_121220307_single_cpu/simulation/modelsim -O0

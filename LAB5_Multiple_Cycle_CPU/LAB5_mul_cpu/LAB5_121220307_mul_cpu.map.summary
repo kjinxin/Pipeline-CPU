@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 17 10:49:39 2014
+Quartus II 32-bit Version : 12.0 Build 178 05/31/2012 SJ Full Version
+Revision Name : LAB5_121220307_mul_cpu
+Top-level Entity Name : LAB5_121220307_mul_cpu
+Family : Cyclone IV E
+Total logic elements : 6,857
+    Total combinational functions : 5,388
+    Dedicated logic registers : 2,140
+Total registers : 2140
+Total pins : 475
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

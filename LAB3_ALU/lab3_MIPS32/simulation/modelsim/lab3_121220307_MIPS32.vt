@@ -1,0 +1,120 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/06/2014 21:38:25"
+                                                                                
+// Verilog Test Bench template for design : lab3_121220307_MIPS32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 10 us/ 1 ps
+module lab3_121220307_MIPS32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [31:0] A;
+reg [3:0] ALU_op;
+reg [31:0] B;
+// wires                                               
+wire [31:0]  ALU_out;
+wire Less;
+wire Overflow;
+wire Zero;
+
+// assign statements (if any)                          
+lab3_121220307_MIPS32 i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.ALU_op(ALU_op),
+	.ALU_out(ALU_out),
+	.B(B),
+	.Less(Less),
+	.Overflow(Overflow),
+	.Zero(Zero)
+);
+                                                   
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+// add two data(no overflow)                       
+A=32'hfabcdef9; B=32'h01871654; ALU_op=4'b0000; #20
+A=32'hafbdef7c; B=32'hcffcd876; ALU_op=4'b0000; #20
+
+// sub two data 
+A=32'h7ab23984; B=32'h68174afe; ALU_op=4'b0001; #20
+A=32'h79879114; B=32'h7fabed8a; ALU_op=4'b0001; #20
+
+// leading zeros
+A=32'h00007576; B=32'habcff871; ALU_op=4'b0010; #20
+A=32'hfabc9879; B=32'habd789ad; ALU_op=4'b0010; #20
+
+// leading ones 
+A=32'hfffabed8; B=32'habedef98; ALU_op=4'b0011; #20
+A=32'h8abde8a2; B=32'h987afe7a; ALU_op=4'b0011; #20
+
+// and operation
+A=32'h95988768; B=32'hfabadefc; ALU_op=4'b0100; #20
+A=32'h987abeff; B=32'hab987efd; ALU_op=4'b0100; #20
+
+// slt/slti operation 
+A=32'h876987ab; B=32'h987af98f; ALU_op=4'b0101; #20
+A=32'hf797abde; B=32'haff987ce; ALU_op=4'b0101; #20
+
+// or operation 
+A=32'h9879aefa; B=32'hbefd987c; ALU_op=4'b0110; #20
+A=32'h89abcdf0; B=32'h00001001; ALU_op=4'b0110; #20
+
+//stlu/stliu
+A=32'hab987ade; B=32'hefa979ab; ALU_op=4'b0111; #20
+A=32'h87aefac5; B=32'h87abeda8; ALU_op=4'b0111; #20
+
+// or not operation 
+A=32'hffa9876e; B=32'h98778a64; ALU_op=4'b1000; #20
+A=32'ha7324fce; B=32'h69879347; ALU_op=4'b1000; #20
+
+// xor operation 
+A=32'h98749189; B=32'h87973428; ALU_op=4'b1001; #20
+A=32'h987498af; B=32'h93874ffa; ALU_op=4'b1001; #20
+
+// seb operation 
+A=32'h98732987; B=32'h2987affe; ALU_op=4'b1010; #20
+A=32'h98398236; B=32'hafeaecd7; ALU_op=4'b1010; #20
+
+// seh operation 
+A=32'h29837598; B=32'hfaed98ac; ALU_op=4'b1011; #20
+A=32'h23242781; B=32'hcde97ad7; ALU_op=4'b1011; #20
+
+// add operation with overflow
+A=32'hfedefac3; B=32'he8798abc; ALU_op=4'b1110; #20
+A=32'h1897e343; B=32'h2983fad9; ALU_op=4'b1110; #20
+
+// sub operation with overflow
+A=32'h98749878; B=32'h68798767; ALU_op=4'b1111; #20
+A=32'he8798709; B=32'hf7679914; ALU_op=4'b1111; #20 
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

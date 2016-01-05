@@ -1,0 +1,130 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "03/24/2014 14:29:05"
+                                                                                
+// Verilog Test Bench template for design : lab3_121220307_ARM32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 10 us/ 1 ps
+module lab3_121220307_ARM32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [31:0] A;
+reg [3:0] ALU_op;
+reg [31:0] B;
+reg Cin;
+// wires                                               
+wire [31:0]  ALU_out;
+wire Carry;
+wire Negative;
+wire Overflow;
+wire Zero;
+
+// assign statements (if any)                          
+lab3_121220307_ARM32 i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.ALU_op(ALU_op),
+	.ALU_out(ALU_out),
+	.B(B),
+	.Carry(Carry),
+	.Cin(Cin),
+	.Negative(Negative),
+	.Overflow(Overflow),
+	.Zero(Zero)
+);                                                   
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin
+//  AND operation                        
+A=32'habce980f; B=32'h98375024; Cin=1'b0; ALU_op=4'b0000; #20
+A=32'h0934aefd; B=32'hfaed089c; Cin=1'b0; ALU_op=4'b0000; #20
+
+//  EOR operation
+A=32'h87593845; B=32'h27502034; Cin=1'b0; ALU_op=4'b0001; #20
+A=32'hafedc8ac; B=32'ha987fe8d; Cin=1'b0; ALU_op=4'b0001; #20
+
+//  SUB operation
+A=32'h98749824; B=32'hf9834043; Cin=1'b0; ALU_op=4'b0010; #20
+A=32'h738409ae; B=32'h0380efea; Cin=1'b0; ALU_op=4'b0010; #20
+
+//  RSB operation
+A=32'hf9834043; B=32'hfb928370; Cin=1'b0; ALU_op=4'b0011; #20
+A=32'h08abedfe; B=32'h97efa78a; Cin=1'b0; ALU_op=4'b0011; #20
+
+//  ADD operation
+A=32'habcdef23; B=32'h38409809; Cin=1'b0; ALU_op=4'b0100; #20
+A=32'haedf8ef8; B=32'hbef987ac; Cin=1'b0; ALU_op=4'b0100; #20
+
+//  ADC operation
+A=32'h87599987; B=32'h29830980; Cin=1'b1; ALU_op=4'b0101; #20
+A=32'h01000001; B=32'h11000011; Cin=1'b1; ALU_op=4'b0101; #20
+
+//  SBC operation
+A=32'haef980af; B=32'h98fed78a; Cin=1'b1; ALU_op=4'b0110; #20
+A=32'hafeb34ed; B=32'h9837acde; Cin=1'b1; ALU_op=4'b0110; #20
+
+//  RSC operation
+A=32'h9874ae98; B=32'h8aef987d; Cin=1'b1; ALU_op=4'b0111; #20
+A=32'h98340afe; B=32'hfb9879ad; Cin=1'b1; ALU_op=4'b0111; #20
+
+//  TST operation
+A=32'h08adfbc7; B=32'h987aedf7; Cin=1'b0; ALU_op=4'b1000; #20
+A=32'h987aef7a; B=32'hafcd98be; Cin=1'b0; ALU_op=4'b1000; #20
+
+//  TEQ operation
+A=32'hfae32984; B=32'h9898ae89; Cin=1'b0; ALU_op=4'b1001; #20
+A=32'h98798983; B=32'h983aedec; Cin=1'b0; ALU_op=4'b1001; #20
+
+//  CMP operation
+A=32'h01234567; B=32'h01234566; Cin=1'b0; ALU_op=4'b1010; #20
+A=32'h01234566; B=32'h01234567; Cin=1'b0; ALU_op=4'b1010; #20
+
+//  CMN operation
+A=32'h01111001; B=32'h00000001; Cin=1'b0; ALU_op=4'b1011; #20
+A=32'h23242781; B=32'h23123354; Cin=1'b0; ALU_op=4'b1011; #20
+
+//  ORR operation
+A=32'h74917498; B=32'h98759823; Cin=1'b0; ALU_op=4'b1100; #20
+A=32'h91879387; B=32'h98798798; Cin=1'b0; ALU_op=4'b1100; #20
+
+//  MOV operation
+A=32'h39847822; B=32'h23874232; Cin=1'b0; ALU_op=4'b1101; #20
+A=32'h23874082; B=32'h19879811; Cin=1'b0; ALU_op=4'b1101; #20
+
+//  BIC operation
+A=32'h59259879; B=32'h20938402; Cin=1'b0; ALU_op=4'b1110; #20
+A=32'h98347981; B=32'h29837409; Cin=1'b0; ALU_op=4'b1110; #20
+
+//  MVN operation
+A=32'h98749878; B=32'h98798767; Cin=1'b0; ALU_op=4'b1111; #20
+A=32'h98798709; B=32'h87679914; Cin=1'b0; ALU_op=4'b1111; #20                                          
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

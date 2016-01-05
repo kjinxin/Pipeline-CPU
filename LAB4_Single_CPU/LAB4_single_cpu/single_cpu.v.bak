@@ -1,0 +1,12 @@
+module sel_5
+(
+	input [4:0] A,
+	input [4:0] B,
+	input ALUsrc,
+	output result
+);
+
+endmodule 
+
+
+

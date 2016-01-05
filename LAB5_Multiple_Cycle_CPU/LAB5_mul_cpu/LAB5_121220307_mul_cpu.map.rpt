@@ -1,0 +1,883 @@
+Analysis & Synthesis report for LAB5_121220307_mul_cpu
+Tue Jun 17 10:49:39 2014
+Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Cpu_control:Cpu_1
+ 13. Parameter Settings for User Entity Instance: registers_32:reg_32
+ 14. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_4"
+ 15. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_3"
+ 16. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_2"
+ 17. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_1"
+ 18. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_8"
+ 19. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_6"
+ 20. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_5"
+ 21. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_4"
+ 22. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_3"
+ 23. Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_1"
+ 24. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_8"
+ 25. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_7"
+ 26. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_6"
+ 27. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_5"
+ 28. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_15"
+ 29. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_14"
+ 30. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_13"
+ 31. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_12"
+ 32. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_11"
+ 33. Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_10"
+ 34. Port Connectivity Checks: "sel_32_4:sel_32_4_2"
+ 35. Port Connectivity Checks: "sel_1_8:sel_1_8_1"
+ 36. Port Connectivity Checks: "sel_32_4:sel_32_4_1"
+ 37. Port Connectivity Checks: "sel_32_5:sel_32_5_1"
+ 38. Port Connectivity Checks: "sel_5_4:sel_5_4_1"
+ 39. Port Connectivity Checks: "sel_5:sel_5_1"
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jun 17 10:49:39 2014     ;
+; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Full Version ;
+; Revision Name                      ; LAB5_121220307_mul_cpu                    ;
+; Top-level Entity Name              ; LAB5_121220307_mul_cpu                    ;
+; Family                             ; Cyclone IV E                              ;
+; Total logic elements               ; 6,857                                     ;
+;     Total combinational functions  ; 5,388                                     ;
+;     Dedicated logic registers      ; 2,140                                     ;
+; Total registers                    ; 2140                                      ;
+; Total pins                         ; 475                                       ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+; Option                                                                     ; Setting                ; Default Value          ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+; Device                                                                     ; EP4CE115F29C7          ;                        ;
+; Top-level entity name                                                      ; LAB5_121220307_mul_cpu ; LAB5_121220307_mul_cpu ;
+; Family name                                                                ; Cyclone IV E           ; Cyclone IV GX          ;
+; Use smart compilation                                                      ; Off                    ; Off                    ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                     ; On                     ;
+; Enable compact report table                                                ; Off                    ; Off                    ;
+; Restructure Multiplexers                                                   ; Auto                   ; Auto                   ;
+; Create Debugging Nodes for IP Cores                                        ; Off                    ; Off                    ;
+; Preserve fewer node names                                                  ; On                     ; On                     ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                    ; Off                    ;
+; Verilog Version                                                            ; Verilog_2001           ; Verilog_2001           ;
+; VHDL Version                                                               ; VHDL_1993              ; VHDL_1993              ;
+; State Machine Processing                                                   ; Auto                   ; Auto                   ;
+; Safe State Machine                                                         ; Off                    ; Off                    ;
+; Extract Verilog State Machines                                             ; On                     ; On                     ;
+; Extract VHDL State Machines                                                ; On                     ; On                     ;
+; Ignore Verilog initial constructs                                          ; Off                    ; Off                    ;
+; Iteration limit for constant Verilog loops                                 ; 5000                   ; 5000                   ;
+; Iteration limit for non-constant Verilog loops                             ; 250                    ; 250                    ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                     ; On                     ;
+; Infer RAMs from Raw Logic                                                  ; On                     ; On                     ;
+; Parallel Synthesis                                                         ; On                     ; On                     ;
+; DSP Block Balancing                                                        ; Auto                   ; Auto                   ;
+; NOT Gate Push-Back                                                         ; On                     ; On                     ;
+; Power-Up Don't Care                                                        ; On                     ; On                     ;
+; Remove Redundant Logic Cells                                               ; Off                    ; Off                    ;
+; Remove Duplicate Registers                                                 ; On                     ; On                     ;
+; Ignore CARRY Buffers                                                       ; Off                    ; Off                    ;
+; Ignore CASCADE Buffers                                                     ; Off                    ; Off                    ;
+; Ignore GLOBAL Buffers                                                      ; Off                    ; Off                    ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                    ; Off                    ;
+; Ignore LCELL Buffers                                                       ; Off                    ; Off                    ;
+; Ignore SOFT Buffers                                                        ; On                     ; On                     ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                    ; Off                    ;
+; Optimization Technique                                                     ; Balanced               ; Balanced               ;
+; Carry Chain Length                                                         ; 70                     ; 70                     ;
+; Auto Carry Chains                                                          ; On                     ; On                     ;
+; Auto Open-Drain Pins                                                       ; On                     ; On                     ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                    ; Off                    ;
+; Auto ROM Replacement                                                       ; On                     ; On                     ;
+; Auto RAM Replacement                                                       ; On                     ; On                     ;
+; Auto DSP Block Replacement                                                 ; On                     ; On                     ;
+; Auto Shift Register Replacement                                            ; Auto                   ; Auto                   ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                   ; Auto                   ;
+; Auto Clock Enable Replacement                                              ; On                     ; On                     ;
+; Strict RAM Replacement                                                     ; Off                    ; Off                    ;
+; Allow Synchronous Control Signals                                          ; On                     ; On                     ;
+; Force Use of Synchronous Clear Signals                                     ; Off                    ; Off                    ;
+; Auto RAM Block Balancing                                                   ; On                     ; On                     ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                    ; Off                    ;
+; Auto Resource Sharing                                                      ; Off                    ; Off                    ;
+; Allow Any RAM Size For Recognition                                         ; Off                    ; Off                    ;
+; Allow Any ROM Size For Recognition                                         ; Off                    ; Off                    ;
+; Allow Any Shift Register Size For Recognition                              ; Off                    ; Off                    ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                     ; On                     ;
+; Ignore translate_off and synthesis_off directives                          ; Off                    ; Off                    ;
+; Timing-Driven Synthesis                                                    ; On                     ; On                     ;
+; Report Parameter Settings                                                  ; On                     ; On                     ;
+; Report Source Assignments                                                  ; On                     ; On                     ;
+; Report Connectivity Checks                                                 ; On                     ; On                     ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                    ; Off                    ;
+; Synchronization Register Chain Length                                      ; 2                      ; 2                      ;
+; PowerPlay Power Optimization                                               ; Normal compilation     ; Normal compilation     ;
+; HDL message level                                                          ; Level2                 ; Level2                 ;
+; Suppress Register Optimization Related Messages                            ; Off                    ; Off                    ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                   ; 5000                   ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                   ; 5000                   ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                    ; 100                    ;
+; Clock MUX Protection                                                       ; On                     ; On                     ;
+; Auto Gated Clock Conversion                                                ; Off                    ; Off                    ;
+; Block Design Naming                                                        ; Auto                   ; Auto                   ;
+; SDC constraint protection                                                  ; Off                    ; Off                    ;
+; Synthesis Effort                                                           ; Auto                   ; Auto                   ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                     ; On                     ;
+; Analysis & Synthesis Message Level                                         ; Medium                 ; Medium                 ;
+; Disable Register Merging Across Hierarchies                                ; Auto                   ; Auto                   ;
+; Resource Aware Inference For Block RAM                                     ; On                     ; On                     ;
+; Synthesis Seed                                                             ; 1                      ; 1                      ;
++----------------------------------------------------------------------------+------------------------+------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; LAB5_121220307_mul_cpu.v         ; yes             ; User Verilog HDL File        ; F:/LAB5_121220307_mul_cpu/LAB5_121220307_mul_cpu.v ;         ;
+; testcode                         ; yes             ; Auto-Found Unspecified File  ; F:/LAB5_121220307_mul_cpu/testcode                 ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 6,857     ;
+;                                             ;           ;
+; Total combinational functions               ; 5388      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 3252      ;
+;     -- 3 input functions                    ; 1104      ;
+;     -- <=2 input functions                  ; 1032      ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 4926      ;
+;     -- arithmetic mode                      ; 462       ;
+;                                             ;           ;
+; Total registers                             ; 2140      ;
+;     -- Dedicated logic registers            ; 2140      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 475       ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 2140      ;
+; Total fan-out                               ; 25197     ;
+; Average fan-out                             ; 2.97      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |LAB5_121220307_mul_cpu      ; 5388 (1)          ; 2140 (0)     ; 0           ; 0            ; 0       ; 0         ; 475  ; 0            ; |LAB5_121220307_mul_cpu                                          ;              ;
+;    |ALU:ALU_1|               ; 1233 (1233)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|ALU:ALU_1                                ;              ;
+;    |Cpu_control:Cpu_1|       ; 102 (102)         ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|Cpu_control:Cpu_1                        ;              ;
+;    |IR_reg:IR_reg_1|         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|IR_reg:IR_reg_1                          ;              ;
+;    |Mem_reg:Mem_reg_1|       ; 1287 (1287)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1                        ;              ;
+;    |PC_counter:PC_counter_1| ; 5 (5)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|PC_counter:PC_counter_1                  ;              ;
+;    |addr_reg:addr_reg_1|     ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|addr_reg:addr_reg_1                      ;              ;
+;    |mem_shift:mem_shift_1|   ; 57 (5)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|mem_shift:mem_shift_1                    ;              ;
+;       |sel_8_4:sel_8_4_10|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|mem_shift:mem_shift_1|sel_8_4:sel_8_4_10 ;              ;
+;       |sel_8_4:sel_8_4_14|   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|mem_shift:mem_shift_1|sel_8_4:sel_8_4_14 ;              ;
+;       |sel_8_4:sel_8_4_9|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|mem_shift:mem_shift_1|sel_8_4:sel_8_4_9  ;              ;
+;       |sel_8_8:sel_8_8_5|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|mem_shift:mem_shift_1|sel_8_8:sel_8_8_5  ;              ;
+;    |reg_shift:reg_shift_1|   ; 131 (5)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1                    ;              ;
+;       |sel_8_4:sel_8_4_2|    ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_4:sel_8_4_2  ;              ;
+;       |sel_8_8:sel_8_8_1|    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_1  ;              ;
+;       |sel_8_8:sel_8_8_2|    ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_2  ;              ;
+;       |sel_8_8:sel_8_8_3|    ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_3  ;              ;
+;       |sel_8_8:sel_8_8_4|    ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_4  ;              ;
+;    |registers_32:reg_32|     ; 1691 (1691)       ; 1016 (1016)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|registers_32:reg_32                      ;              ;
+;    |sel_32:sel_32_1|         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32:sel_32_1                          ;              ;
+;    |sel_32:sel_32_2|         ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32:sel_32_2                          ;              ;
+;    |sel_32:sel_32_3|         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32:sel_32_3                          ;              ;
+;    |sel_32_4:sel_32_4_1|     ; 133 (133)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_1                      ;              ;
+;    |sel_32_4:sel_32_4_2|     ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_2                      ;              ;
+;    |sel_32_5:sel_32_5_1|     ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_32_5:sel_32_5_1                      ;              ;
+;    |sel_5:sel_5_1|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_5:sel_5_1                            ;              ;
+;    |sel_5:sel_5_2|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_5:sel_5_2                            ;              ;
+;    |sel_5_4:sel_5_4_1|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|sel_5_4:sel_5_4_1                        ;              ;
+;    |shift_reg:shift_reg_1|   ; 507 (507)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LAB5_121220307_mul_cpu|shift_reg:shift_reg_1                    ;              ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; registers_32:reg_32|register[0][30]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][29]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][28]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][27]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][26]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][25]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][24]   ; Stuck at GND due to stuck port data_in ;
+; registers_32:reg_32|register[0][31]   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2140  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2112  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; registers_32:reg_32|register[30][31]      ; 2       ;
+; registers_32:reg_32|register[1][31]       ; 2       ;
+; registers_32:reg_32|register[29][30]      ; 2       ;
+; registers_32:reg_32|register[31][30]      ; 2       ;
+; registers_32:reg_32|register[4][30]       ; 2       ;
+; registers_32:reg_32|register[1][30]       ; 2       ;
+; registers_32:reg_32|register[3][30]       ; 2       ;
+; registers_32:reg_32|register[29][29]      ; 2       ;
+; registers_32:reg_32|register[31][29]      ; 2       ;
+; registers_32:reg_32|register[1][29]       ; 2       ;
+; registers_32:reg_32|register[3][29]       ; 2       ;
+; registers_32:reg_32|register[29][28]      ; 2       ;
+; registers_32:reg_32|register[31][28]      ; 2       ;
+; registers_32:reg_32|register[1][28]       ; 2       ;
+; registers_32:reg_32|register[3][28]       ; 2       ;
+; registers_32:reg_32|register[29][27]      ; 2       ;
+; registers_32:reg_32|register[31][27]      ; 2       ;
+; registers_32:reg_32|register[4][27]       ; 2       ;
+; registers_32:reg_32|register[1][27]       ; 2       ;
+; registers_32:reg_32|register[29][26]      ; 2       ;
+; registers_32:reg_32|register[31][26]      ; 2       ;
+; registers_32:reg_32|register[29][25]      ; 2       ;
+; registers_32:reg_32|register[31][25]      ; 2       ;
+; registers_32:reg_32|register[1][25]       ; 2       ;
+; registers_32:reg_32|register[3][25]       ; 2       ;
+; registers_32:reg_32|register[29][24]      ; 2       ;
+; registers_32:reg_32|register[31][24]      ; 2       ;
+; registers_32:reg_32|register[4][24]       ; 2       ;
+; registers_32:reg_32|register[2][24]       ; 2       ;
+; registers_32:reg_32|register[29][23]      ; 2       ;
+; registers_32:reg_32|register[31][23]      ; 2       ;
+; registers_32:reg_32|register[1][23]       ; 2       ;
+; registers_32:reg_32|register[3][23]       ; 2       ;
+; registers_32:reg_32|register[29][22]      ; 2       ;
+; registers_32:reg_32|register[31][22]      ; 2       ;
+; registers_32:reg_32|register[4][22]       ; 2       ;
+; registers_32:reg_32|register[2][22]       ; 2       ;
+; registers_32:reg_32|register[29][21]      ; 2       ;
+; registers_32:reg_32|register[31][21]      ; 2       ;
+; registers_32:reg_32|register[1][21]       ; 2       ;
+; registers_32:reg_32|register[3][21]       ; 2       ;
+; registers_32:reg_32|register[29][20]      ; 2       ;
+; registers_32:reg_32|register[31][20]      ; 2       ;
+; registers_32:reg_32|register[4][20]       ; 2       ;
+; registers_32:reg_32|register[2][20]       ; 2       ;
+; registers_32:reg_32|register[29][19]      ; 2       ;
+; registers_32:reg_32|register[31][19]      ; 2       ;
+; registers_32:reg_32|register[1][19]       ; 2       ;
+; registers_32:reg_32|register[29][18]      ; 2       ;
+; registers_32:reg_32|register[31][18]      ; 2       ;
+; registers_32:reg_32|register[1][18]       ; 2       ;
+; registers_32:reg_32|register[2][18]       ; 2       ;
+; registers_32:reg_32|register[3][18]       ; 2       ;
+; registers_32:reg_32|register[29][17]      ; 2       ;
+; registers_32:reg_32|register[31][17]      ; 2       ;
+; registers_32:reg_32|register[29][16]      ; 2       ;
+; registers_32:reg_32|register[31][16]      ; 2       ;
+; registers_32:reg_32|register[4][16]       ; 2       ;
+; registers_32:reg_32|register[2][16]       ; 2       ;
+; registers_32:reg_32|register[29][15]      ; 2       ;
+; registers_32:reg_32|register[31][15]      ; 2       ;
+; registers_32:reg_32|register[29][14]      ; 2       ;
+; registers_32:reg_32|register[31][14]      ; 2       ;
+; registers_32:reg_32|register[29][13]      ; 2       ;
+; registers_32:reg_32|register[31][13]      ; 2       ;
+; registers_32:reg_32|register[2][13]       ; 2       ;
+; registers_32:reg_32|register[3][13]       ; 2       ;
+; registers_32:reg_32|register[29][12]      ; 2       ;
+; registers_32:reg_32|register[31][12]      ; 2       ;
+; registers_32:reg_32|register[4][12]       ; 2       ;
+; registers_32:reg_32|register[29][11]      ; 2       ;
+; registers_32:reg_32|register[31][11]      ; 2       ;
+; registers_32:reg_32|register[1][11]       ; 2       ;
+; registers_32:reg_32|register[3][11]       ; 2       ;
+; registers_32:reg_32|register[29][10]      ; 2       ;
+; registers_32:reg_32|register[31][10]      ; 2       ;
+; registers_32:reg_32|register[29][9]       ; 2       ;
+; registers_32:reg_32|register[31][9]       ; 2       ;
+; registers_32:reg_32|register[4][9]        ; 2       ;
+; registers_32:reg_32|register[2][9]        ; 2       ;
+; registers_32:reg_32|register[1][9]        ; 2       ;
+; registers_32:reg_32|register[3][9]        ; 2       ;
+; registers_32:reg_32|register[29][8]       ; 2       ;
+; registers_32:reg_32|register[31][8]       ; 2       ;
+; registers_32:reg_32|register[4][8]        ; 2       ;
+; registers_32:reg_32|register[1][8]        ; 2       ;
+; registers_32:reg_32|register[2][8]        ; 2       ;
+; registers_32:reg_32|register[3][8]        ; 2       ;
+; registers_32:reg_32|register[29][7]       ; 2       ;
+; registers_32:reg_32|register[31][7]       ; 2       ;
+; registers_32:reg_32|register[2][7]        ; 2       ;
+; registers_32:reg_32|register[29][6]       ; 2       ;
+; registers_32:reg_32|register[31][6]       ; 2       ;
+; registers_32:reg_32|register[4][6]        ; 2       ;
+; registers_32:reg_32|register[2][6]        ; 2       ;
+; registers_32:reg_32|register[1][5]        ; 2       ;
+; registers_32:reg_32|register[3][5]        ; 2       ;
+; registers_32:reg_32|register[29][5]       ; 2       ;
+; registers_32:reg_32|register[31][5]       ; 2       ;
+; registers_32:reg_32|register[4][4]        ; 2       ;
+; Total number of inverted registers = 483* ;         ;
++-------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                           ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------------+----------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |LAB5_121220307_mul_cpu|PC_counter:PC_counter_1|PC_out[1]            ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; |LAB5_121220307_mul_cpu|PC_counter:PC_counter_1|PC_out[30]           ;                            ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|PC_counter:PC_counter_1|PC_out[21]           ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|register[0][7]           ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|register[0][24]          ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|register[0][23]          ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|register[0][8]           ;                            ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; |LAB5_121220307_mul_cpu|Cpu_control:Cpu_1|state[2]                   ;                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|sel_5_4:sel_5_4_1|Mux1                       ;                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; |LAB5_121220307_mul_cpu|Cpu_control:Cpu_1|Shift_op[0]                ;                            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_1|Mux4 ;                            ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux24                      ;                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_5:sel_32_5_1|Mux31                    ;                            ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_5:sel_32_5_1|Mux0                     ;                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; |LAB5_121220307_mul_cpu|Cpu_control:Cpu_1|Selector3                  ;                            ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 39 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_5:sel_32_5_1|Mux26                    ;                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_5:sel_32_5_1|Mux14                    ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_1|Mux2 ;                            ;
+; 9:1                ; 23 bits   ; 138 LEs       ; 115 LEs              ; 23 LEs                 ; |LAB5_121220307_mul_cpu|ALU:ALU_1|Mux14                              ;                            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_4|Mux0 ;                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux28                      ;                            ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux27                      ;                            ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|Mux21                    ;                            ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; |LAB5_121220307_mul_cpu|registers_32:reg_32|Mux63                    ;                            ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|ALU:ALU_1|Mux18                              ;                            ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_2|Mux2 ;                            ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|reg_shift:reg_shift_1|sel_8_8:sel_8_8_3|Mux6 ;                            ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux30                      ;                            ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux25                      ;                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_1|Mux4                     ;                            ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 40 LEs               ; 8 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_1|Mux8                     ;                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux25                      ;                            ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux2                       ;                            ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux29                      ;                            ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_1|Mux27                    ;                            ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; |LAB5_121220307_mul_cpu|sel_32_4:sel_32_4_1|Mux17                    ;                            ;
+; 79:1               ; 2 bits    ; 104 LEs       ; 22 LEs               ; 82 LEs                 ; |LAB5_121220307_mul_cpu|Cpu_control:Cpu_1|Mux7                       ;                            ;
+; 16:1               ; 24 bits   ; 240 LEs       ; 240 LEs              ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux28                      ;                            ;
+; 32:1               ; 8 bits    ; 168 LEs       ; 168 LEs              ; 0 LEs                  ; |LAB5_121220307_mul_cpu|Mem_reg:Mem_reg_1|Mux30                      ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+----------------------------------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Cpu_control:Cpu_1 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; PCM            ; 0000  ; Unsigned Binary                       ;
+; IFetch         ; 0001  ; Unsigned Binary                       ;
+; RFetch_ID      ; 0010  ; Unsigned Binary                       ;
+; MemAdr         ; 0011  ; Unsigned Binary                       ;
+; lwFinish       ; 0100  ; Unsigned Binary                       ;
+; SwFinish       ; 0101  ; Unsigned Binary                       ;
+; Rexec          ; 0110  ; Unsigned Binary                       ;
+; RFinish        ; 0111  ; Unsigned Binary                       ;
+; Iexec          ; 1000  ; Unsigned Binary                       ;
+; Brexec         ; 1001  ; Unsigned Binary                       ;
+; BrFinish       ; 1010  ; Unsigned Binary                       ;
+; JumpFinish     ; 1011  ; Unsigned Binary                       ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registers_32:reg_32 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; data_width     ; 32    ; Signed Integer                          ;
+; addr_width     ; 5     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_4" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_3" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_2" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_8:sel_8_8_1" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_8" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                             ;
+; data2 ; Input ; Info     ; Stuck at GND                             ;
+; data1 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_6" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                             ;
+; data2 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_5" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data0 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_4" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_3" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data1 ; Input ; Info     ; Stuck at GND                             ;
+; data0 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_shift:reg_shift_1|sel_8_4:sel_8_4_1" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; data2 ; Input ; Info     ; Stuck at GND                             ;
+; data1 ; Input ; Info     ; Stuck at GND                             ;
+; data0 ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_8" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_7" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c3   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_6" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
+; c1   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_8:sel_8_8_5" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; c7   ; Input ; Info     ; Stuck at GND                              ;
++------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_15" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data2 ; Input ; Info     ; Stuck at GND                              ;
+; data1 ; Input ; Info     ; Stuck at GND                              ;
+; data0 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_14" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_13" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data1 ; Input ; Info     ; Stuck at GND                              ;
+; data0 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_12" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                              ;
+; data2 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_11" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data0 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_shift:mem_shift_1|sel_8_4:sel_8_4_10" ;
++-------+-------+----------+-------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                   ;
++-------+-------+----------+-------------------------------------------+
+; data3 ; Input ; Info     ; Stuck at GND                              ;
+; data2 ; Input ; Info     ; Stuck at GND                              ;
+; data1 ; Input ; Info     ; Stuck at GND                              ;
++-------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "sel_32_4:sel_32_4_2" ;
++-------------+-------+----------+----------------+
+; Port        ; Type  ; Severity ; Details        ;
++-------------+-------+----------+----------------+
+; data2[1..0] ; Input ; Info     ; Stuck at GND   ;
++-------------+-------+----------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sel_1_8:sel_1_8_1"                                                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; c7     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; c0     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; c0[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "sel_32_4:sel_32_4_1" ;
++-------+-------+----------+----------------------+
+; Port  ; Type  ; Severity ; Details              ;
++-------+-------+----------+----------------------+
+; data3 ; Input ; Info     ; Stuck at GND         ;
++-------+-------+----------+----------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "sel_32_5:sel_32_5_1" ;
++--------------+-------+----------+---------------+
+; Port         ; Type  ; Severity ; Details       ;
++--------------+-------+----------+---------------+
+; data4[15..0] ; Input ; Info     ; Stuck at GND  ;
+; data3[1..0]  ; Input ; Info     ; Stuck at GND  ;
+; data1[31..3] ; Input ; Info     ; Stuck at GND  ;
+; data1[1..0]  ; Input ; Info     ; Stuck at GND  ;
+; data1[2]     ; Input ; Info     ; Stuck at VCC  ;
++--------------+-------+----------+---------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "sel_5_4:sel_5_4_1" ;
++-------+-------+----------+--------------------+
+; Port  ; Type  ; Severity ; Details            ;
++-------+-------+----------+--------------------+
+; data3 ; Input ; Info     ; Stuck at GND       ;
+; data2 ; Input ; Info     ; Stuck at VCC       ;
++-------+-------+----------+--------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "sel_5:sel_5_1" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; A    ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:37     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 12.0 Build 178 05/31/2012 SJ Full Version
+    Info: Processing started: Tue Jun 17 10:48:01 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LAB5_121220307_mul_cpu -c LAB5_121220307_mul_cpu
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 20 design units, including 20 entities, in source file lab5_121220307_mul_cpu.v
+    Info (12023): Found entity 1: LAB5_121220307_mul_cpu
+    Info (12023): Found entity 2: Cpu_control
+    Info (12023): Found entity 3: reg_shift
+    Info (12023): Found entity 4: mem_shift
+    Info (12023): Found entity 5: sel_8_4
+    Info (12023): Found entity 6: sel_8_8
+    Info (12023): Found entity 7: sel_5
+    Info (12023): Found entity 8: sel_5_4
+    Info (12023): Found entity 9: sel_32
+    Info (12023): Found entity 10: sel_32_4
+    Info (12023): Found entity 11: sel_32_5
+    Info (12023): Found entity 12: sel_1_8
+    Info (12023): Found entity 13: Extend16_32
+    Info (12023): Found entity 14: registers_32
+    Info (12023): Found entity 15: shift_reg
+    Info (12023): Found entity 16: ALU
+    Info (12023): Found entity 17: Mem_reg
+    Info (12023): Found entity 18: addr_reg
+    Info (12023): Found entity 19: IR_reg
+    Info (12023): Found entity 20: PC_counter
+Info (12127): Elaborating entity "LAB5_121220307_mul_cpu" for the top level hierarchy
+Info (12128): Elaborating entity "PC_counter" for hierarchy "PC_counter:PC_counter_1"
+Info (12128): Elaborating entity "sel_32" for hierarchy "sel_32:sel_32_3"
+Info (12128): Elaborating entity "Mem_reg" for hierarchy "Mem_reg:Mem_reg_1"
+Warning (10850): Verilog HDL warning at LAB5_121220307_mul_cpu.v(916): number of words (32) in memory file does not match the number of elements in the address range [0:127]
+Warning (10230): Verilog HDL assignment warning at testcode(1): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(2): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(3): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(4): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(5): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(6): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(7): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(8): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(9): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(10): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(11): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(12): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(13): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(14): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(15): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(16): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(17): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(18): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(19): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(20): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(21): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(22): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(23): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(24): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(25): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(26): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(27): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(28): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(29): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(30): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(31): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at testcode(32): truncated value with size 32 to match size of target (8)
+Warning (10855): Verilog HDL warning at LAB5_121220307_mul_cpu.v(915): initial value for variable mem should be constant
+Info (12128): Elaborating entity "IR_reg" for hierarchy "IR_reg:IR_reg_1"
+Info (12128): Elaborating entity "Cpu_control" for hierarchy "Cpu_control:Cpu_1"
+Warning (10270): Verilog HDL Case Statement warning at LAB5_121220307_mul_cpu.v(332): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at LAB5_121220307_mul_cpu.v(379): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at LAB5_121220307_mul_cpu.v(329): incomplete case statement has no default case item
+Info (12128): Elaborating entity "sel_5" for hierarchy "sel_5:sel_5_1"
+Info (12128): Elaborating entity "sel_5_4" for hierarchy "sel_5_4:sel_5_4_1"
+Info (12128): Elaborating entity "Extend16_32" for hierarchy "Extend16_32:Ext_1"
+Info (12128): Elaborating entity "registers_32" for hierarchy "registers_32:reg_32"
+Info (12128): Elaborating entity "sel_32_5" for hierarchy "sel_32_5:sel_32_5_1"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_1"
+Warning (10240): Verilog HDL Always Construct warning at LAB5_121220307_mul_cpu.v(830): inferring latch(es) for variable "j", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LAB5_121220307_mul_cpu.v(830): inferring latch(es) for variable "k", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at LAB5_121220307_mul_cpu.v(830): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "shift_reg" for hierarchy "shift_reg:shift_reg_1"
+Warning (10240): Verilog HDL Always Construct warning at LAB5_121220307_mul_cpu.v(778): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "sel_32_4" for hierarchy "sel_32_4:sel_32_4_1"
+Info (12128): Elaborating entity "sel_1_8" for hierarchy "sel_1_8:sel_1_8_1"
+Info (12128): Elaborating entity "addr_reg" for hierarchy "addr_reg:addr_reg_1"
+Info (12128): Elaborating entity "mem_shift" for hierarchy "mem_shift:mem_shift_1"
+Info (12128): Elaborating entity "sel_8_4" for hierarchy "mem_shift:mem_shift_1|sel_8_4:sel_8_4_9"
+Info (12128): Elaborating entity "sel_8_8" for hierarchy "mem_shift:mem_shift_1|sel_8_8:sel_8_8_5"
+Info (12128): Elaborating entity "reg_shift" for hierarchy "reg_shift:reg_shift_1"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Condition[2]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file F:/LAB5_121220307_mul_cpu/LAB5_121220307_mul_cpu.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 7460 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 474 output pins
+    Info (21061): Implemented 6985 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 367 megabytes
+    Info: Processing ended: Tue Jun 17 10:49:39 2014
+    Info: Elapsed time: 00:01:38
+    Info: Total CPU time (on all processors): 00:01:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/LAB5_121220307_mul_cpu/LAB5_121220307_mul_cpu.map.smsg.
+
+

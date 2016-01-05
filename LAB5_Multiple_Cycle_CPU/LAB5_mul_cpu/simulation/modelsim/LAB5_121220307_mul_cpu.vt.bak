@@ -1,0 +1,115 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "05/26/2014 15:43:07"
+                                                                                
+// Verilog Test Bench template for design : LAB5_121220307_mul_cpu
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 us/ 1 ps
+module LAB5_121220307_mul_cpu_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+// wires                                               
+wire ALUShift_sel;
+wire ALUSrcA;
+wire [2:0]  ALUSrcB;
+wire [3:0]  ALU_op;
+wire [31:0]  ALU_out;
+wire [31:0]  AddrReg_out;
+wire AddrReg_write_en;
+wire [2:0]  Condition;
+wire Ex_top;
+wire [31:0]  IR;
+wire IR_write;
+wire Iord;
+wire Less;
+wire [1:0]  Mem_addr_in;
+wire [3:0]  Mem_byte_write;
+wire [1:0]  MemtoReg;
+wire Overflow;
+wire [31:0]  PC_out;
+wire [1:0]  PC_source;
+wire PC_write;
+wire PC_write_cond;
+wire [3:0]  Rd_write_byte_en;
+wire [1:0]  RegDst;
+wire RegDt0;
+wire Shift_amountSrc;
+wire [1:0]  Shift_op;
+wire Zero;
+wire [31:0]  busA;
+wire [31:0]  busB;
+wire [3:0]  state;
+
+// assign statements (if any)                          
+LAB5_121220307_mul_cpu i1 (
+// port map - connection between master ports and signals/registers   
+	.ALUShift_sel(ALUShift_sel),
+	.ALUSrcA(ALUSrcA),
+	.ALUSrcB(ALUSrcB),
+	.ALU_op(ALU_op),
+	.ALU_out(ALU_out),
+	.AddrReg_out(AddrReg_out),
+	.AddrReg_write_en(AddrReg_write_en),
+	.Condition(Condition),
+	.Ex_top(Ex_top),
+	.IR(IR),
+	.IR_write(IR_write),
+	.Iord(Iord),
+	.Less(Less),
+	.Mem_addr_in(Mem_addr_in),
+	.Mem_byte_write(Mem_byte_write),
+	.MemtoReg(MemtoReg),
+	.Overflow(Overflow),
+	.PC_out(PC_out),
+	.PC_source(PC_source),
+	.PC_write(PC_write),
+	.PC_write_cond(PC_write_cond),
+	.Rd_write_byte_en(Rd_write_byte_en),
+	.RegDst(RegDst),
+	.RegDt0(RegDt0),
+	.Shift_amountSrc(Shift_amountSrc),
+	.Shift_op(Shift_op),
+	.Zero(Zero),
+	.busA(busA),
+	.busB(busB),
+	.clk(clk),
+	.state(state)
+);
+always
+#10 clk=~clk;                                                    
+always  
+clk=0;                                               
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

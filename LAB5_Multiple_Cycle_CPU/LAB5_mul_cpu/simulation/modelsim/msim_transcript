@@ -1,0 +1,77 @@
+# Reading D:/Program Files/Altera/modelsim_ase/tcl/vsim/pref.tcl 
+# do LAB5_121220307_mul_cpu_run_msim_gate_verilog.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying D:\Program Files\Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Program Files\Altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+. {LAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module LAB5_121220307_mul_cpu
+# 
+# Top level modules:
+# 	LAB5_121220307_mul_cpu
+# 
+# vlog -vlog01compat -work work +incdir+F:/LAB5_121220307_mul_cpu/simulation/modelsim {F:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt}
+# Model Technology ModelSim ALTERA vlog 10.0d Compiler 2012.01 Jan 18 2012
+# -- Compiling module LAB5_121220307_mul_cpu_vlg_tst
+# 
+# Top level modules:
+# 	LAB5_121220307_mul_cpu_vlg_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  LAB5_121220307_mul_cpu_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps LAB5_121220307_mul_cpu_vlg_tst 
+# Loading work.LAB5_121220307_mul_cpu_vlg_tst
+# Loading work.LAB5_121220307_mul_cpu
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading instances from LAB5_121220307_mul_cpu_7_1200mv_85c_v_slow.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from LAB5_121220307_mul_cpu_7_1200mv_85c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst File: F:/LAB5_121220307_mul_cpu/simulation/modelsim/LAB5_121220307_mul_cpu.vt
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:18492 ps, d:18516 ps, 186 ps );
+#    Time: 18516 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\PC_counter_1|PC_out[5] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:28527 ps, d:28638 ps, 186 ps );
+#    Time: 28638 ps  Iteration: 1  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\addr_reg_1|AddrReg_out[31] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:28519 ps, d:28682 ps, 186 ps );
+#    Time: 28682 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\addr_reg_1|AddrReg_out[28] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:38527 ps, d:38551 ps, 186 ps );
+#    Time: 38551 ps  Iteration: 1  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\addr_reg_1|AddrReg_out[31] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:38518 ps, d:38597 ps, 186 ps );
+#    Time: 38597 ps  Iteration: 1  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\addr_reg_1|AddrReg_out[17] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:38551 ps, d:38633 ps, 186 ps );
+#    Time: 38633 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\addr_reg_1|AddrReg_out[4] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(286): $hold( posedge clk &&& reset:53660 ps, ena:53759 ps, 186 ps );
+#    Time: 53759 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\reg_32|register[5][31] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(286): $hold( posedge clk &&& reset:53660 ps, ena:53759 ps, 186 ps );
+#    Time: 53759 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\reg_32|register[5][24] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(286): $hold( posedge clk &&& reset:53660 ps, ena:53759 ps, 186 ps );
+#    Time: 53759 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\reg_32|register[5][27] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(286): $hold( posedge clk &&& reset:53660 ps, ena:53759 ps, 186 ps );
+#    Time: 53759 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\reg_32|register[5][29] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(286): $hold( posedge clk &&& reset:53660 ps, ena:53759 ps, 186 ps );
+#    Time: 53759 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\reg_32|register[5][25] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:68517 ps, d:68548 ps, 186 ps );
+#    Time: 68548 ps  Iteration: 0  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\PC_counter_1|PC_out[1] 
+# ** Error: D:/Program Files/Altera/modelsim_ase/win32aloem/../altera/verilog/src/altera_primitives.v(282): $hold( posedge clk &&& nosloadsclr:68517 ps, d:68602 ps, 186 ps );
+#    Time: 68602 ps  Iteration: 1  Instance: /LAB5_121220307_mul_cpu_vlg_tst/i1/\PC_counter_1|PC_out[0] 
+# Break key hit 
+# Break in Module LAB5_121220307_mul_cpu in file LAB5_121220307_mul_cpu_7_1200mv_85c_slow.vo

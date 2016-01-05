@@ -1,0 +1,39 @@
+module lab2_121220307
+(
+	input [31:0] Shift_in, // the input data that we want to shif_in
+	input [4:0] Shift_amout, // the amount that we want to shift the data
+	input [1:0] Shift_op,   // choose which style that we want to shift
+	output [31:0] Shift_out // the data that after we shift
+);
+
+reg [31:0] Shift_out;
+module 
+always @ (*)
+begin
+	integer i;
+	case (shift_in)
+		2'b00:
+				begin
+					Shift_out=Shift_in<<Shift_amout;
+				end
+		2'b01:
+				begin
+					Shift_out=Shift_in>>Shift_amout;
+				end
+		2'b10:
+				begin
+					Shift_out[31-Shift_amout:0]=Shift_in[31:Shift_amout];
+					for (i=31; i>31-Shift_amout; i=i-1)
+					begin
+						Shift_out[i]=Shift_in[31];
+					end
+				end
+		2'b11:
+				begin
+					Shift_out[31-Shift_amout:0]=Shift_in[31:Shift_amout];
+					Shift_out[31:32-Shift_amout]=Shift_in[Shift_amout-1:0];
+				end
+	endcase
+end
+
+

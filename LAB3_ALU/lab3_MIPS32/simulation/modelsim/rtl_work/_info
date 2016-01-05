@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\lab3_121220307_MIPS32\simulation\modelsim
+vlab3_121220307_MIPS32
+I=CBiCfF4InP7mC]j[3dH42
+V2<VaG0b@IGBYBbVMUm2<O1
+Z1 dF:\lab3_121220307_MIPS32\simulation\modelsim
+w1396792545
+8F:/lab3_121220307_MIPS32/lab3_121220307_MIPS32.v
+FF:/lab3_121220307_MIPS32/lab3_121220307_MIPS32.v
+L0 1
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+nlab3_121220307_@m@i@p@s32
+!s100 [BgX<EI@;U0@LeY0??kdS0
+!s85 0
+!s108 1396832388.936000
+!s107 F:/lab3_121220307_MIPS32/lab3_121220307_MIPS32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/lab3_121220307_MIPS32|F:/lab3_121220307_MIPS32/lab3_121220307_MIPS32.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+F:/lab3_121220307_MIPS32 -O0
+vlab3_121220307_MIPS32_vlg_tst
+!s100 ULgeHOIIO`fFU0b8bh0a52
+IBED0^RMR;XG^UXV<iML]O1
+VM1diWeOMUY:noLlMJ=fKz1
+R1
+w1396791552
+8F:/lab3_121220307_MIPS32/simulation/modelsim/lab3_121220307_MIPS32.vt
+FF:/lab3_121220307_MIPS32/simulation/modelsim/lab3_121220307_MIPS32.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1396832389.186000
+!s107 F:/lab3_121220307_MIPS32/simulation/modelsim/lab3_121220307_MIPS32.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/lab3_121220307_MIPS32/simulation/modelsim|F:/lab3_121220307_MIPS32/simulation/modelsim/lab3_121220307_MIPS32.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/lab3_121220307_MIPS32/simulation/modelsim -O0
+nlab3_121220307_@m@i@p@s32_vlg_tst

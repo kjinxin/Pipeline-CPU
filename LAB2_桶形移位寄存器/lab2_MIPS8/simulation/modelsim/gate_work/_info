@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\lab2_121220307_MIPS8\simulation\modelsim
+vlab2_121220307_MIPS8
+IJS:Z:>4^Xj<PhhbE`S^1P3
+Vm5264gfeJnzPMJf12zjEK2
+Z1 dF:\lab2_121220307_MIPS8\simulation\modelsim
+w1396248345
+8lab2_121220307_MIPS8_7_1200mv_85c_slow.vo
+Flab2_121220307_MIPS8_7_1200mv_85c_slow.vo
+L0 31
+Z2 OV;L;10.0d;49
+r1
+31
+Z3 o-vlog01compat -work work -O0
+nlab2_121220307_@m@i@p@s8
+!s100 ]_igHcI]55KSg^Hhz8KIK2
+!s85 0
+!s108 1396248679.611000
+!s107 lab2_121220307_MIPS8_7_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|lab2_121220307_MIPS8_7_1200mv_85c_slow.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vlab2_121220307_MIPS8_vlg_tst
+!s100 Ani?S_zSgcHZK2fccT2ea2
+ImPNS6_=P6mDmg9QBSLDZk2
+VZ=3^?mj4fcPV_7;OAHB051
+R1
+w1396247677
+8F:/lab2_121220307_MIPS8/simulation/modelsim/lab2_121220307_MIPS8.vt
+FF:/lab2_121220307_MIPS8/simulation/modelsim/lab2_121220307_MIPS8.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1396248680.361000
+!s107 F:/lab2_121220307_MIPS8/simulation/modelsim/lab2_121220307_MIPS8.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/lab2_121220307_MIPS8/simulation/modelsim|F:/lab2_121220307_MIPS8/simulation/modelsim/lab2_121220307_MIPS8.vt|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+F:/lab2_121220307_MIPS8/simulation/modelsim -O0
+nlab2_121220307_@m@i@p@s8_vlg_tst

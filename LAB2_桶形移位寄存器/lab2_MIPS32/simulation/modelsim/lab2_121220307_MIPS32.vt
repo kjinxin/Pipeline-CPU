@@ -1,0 +1,77 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "03/16/2014 17:18:40"
+                                                                                
+// Verilog Test Bench template for design : lab2_121220307_MIPS32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 10 us/ 1 ps
+module lab2_121220307_MIPS32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [4:0] Shift_amount;
+reg [31:0] Shift_in;
+reg [1:0] Shift_op;
+// wires                                               
+wire [31:0]  Shift_out;
+
+// assign statements (if any)                          
+lab2_121220307_MIPS32 i1 (
+// port map - connection between master ports and signals/registers   
+	.Shift_amount(Shift_amount),
+	.Shift_in(Shift_in),
+	.Shift_op(Shift_op),
+	.Shift_out(Shift_out)
+);                                                
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+Shift_op=2'b00; Shift_amount=5'b00001; Shift_in=32'hfa0af9a0; #20
+Shift_op=2'b00; Shift_amount=5'b10011; Shift_in=32'haf987001; #20  
+Shift_op=2'b00; Shift_amount=5'b01101; Shift_in=32'h12345678; #20
+Shift_op=2'b00; Shift_amount=5'b11111; Shift_in=32'h28768121; #20 
+// logic left shift     
+Shift_op=2'b01; Shift_amount=5'b00001; Shift_in=32'hadedea98; #20
+Shift_op=2'b01; Shift_amount=5'b01011; Shift_in=32'h96856876; #20   
+Shift_op=2'b01; Shift_amount=5'b10101; Shift_in=32'hdefabc03; #20
+Shift_op=2'b01; Shift_amount=5'b11111; Shift_in=32'h980980af; #20
+// logic right shift 
+Shift_op=2'b10; Shift_amount=5'b00001; Shift_in=32'h9876abde; #20
+Shift_op=2'b10; Shift_amount=5'b01011; Shift_in=32'hfffaff89; #20   
+Shift_op=2'b10; Shift_amount=5'b10101; Shift_in=32'h0987abcd; #20
+Shift_op=2'b10; Shift_amount=5'b11111; Shift_in=32'hfededea9; #20
+// algebra right shift 
+Shift_op=2'b11; Shift_amount=5'b00001; Shift_in=32'haabbed8d; #20
+Shift_op=2'b11; Shift_amount=5'b01011; Shift_in=32'h87687665; #20   
+Shift_op=2'b11; Shift_amount=5'b10101; Shift_in=32'h12387234; #20
+Shift_op=2'b11; Shift_amount=5'b11111; Shift_in=32'h88787698; #20
+// circle right shift                                                        
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

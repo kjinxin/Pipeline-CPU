@@ -1,0 +1,88 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "03/16/2014 21:07:13"
+                                                                                
+// Verilog Test Bench template for design : lab2_121220307_ARM32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 10 us/ 1 ps
+module lab2_121220307_ARM32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg Carry_flag;
+reg [4:0] Shift_amount;
+reg [31:0] Shift_in;
+reg [1:0] Shift_op;
+// wires                                               
+wire Shift_carry_out;
+wire [31:0]  Shift_out;
+
+// assign statements (if any)                          
+lab2_121220307_ARM32 i1 (
+// port map - connection between master ports and signals/registers   
+	.Carry_flag(Carry_flag),
+	.Shift_amount(Shift_amount),
+	.Shift_carry_out(Shift_carry_out),
+	.Shift_in(Shift_in),
+	.Shift_op(Shift_op),
+	.Shift_out(Shift_out)
+);                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+Shift_op=2'b00; Shift_amount=5'b00001; Shift_in=32'h19832142; Carry_flag=1'b1; #20
+Shift_op=2'b00; Shift_amount=5'b01011; Shift_in=32'h89745149; Carry_flag=1'b1; #20
+Shift_op=2'b00; Shift_amount=5'b10101; Shift_in=32'h99173abc; Carry_flag=1'b1; #20
+Shift_op=2'b00; Shift_amount=5'b11111; Shift_in=32'hfffabced; Carry_flag=1'b1; #20
+// logic left shift 
+Shift_op=2'b01; Shift_amount=5'b00001; Shift_in=32'hfabcdeaf; Carry_flag=1'b1; #20
+Shift_op=2'b01; Shift_amount=5'b01011; Shift_in=32'h87aaaffb; Carry_flag=1'b1; #20
+Shift_op=2'b01; Shift_amount=5'b10101; Shift_in=32'hcdcdefa9; Carry_flag=1'b1; #20
+Shift_op=2'b01; Shift_amount=5'b11111; Shift_in=32'h987abc01; Carry_flag=1'b1; #20
+// the Shift_amount equals to 0;
+Shift_op=2'b01; Shift_amount=5'b00000; Shift_in=32'h87687aed; Carry_flag=1'b1; #20
+Shift_op=2'b01; Shift_amount=5'b00000; Shift_in=32'h876adedf; Carry_flag=1'b1; #20
+// algebra right shift 
+Shift_op=2'b10; Shift_amount=5'b00001; Shift_in=32'haffd8768; Carry_flag=1'b1; #20
+Shift_op=2'b10; Shift_amount=5'b01011; Shift_in=32'hcdaf87ad; Carry_flag=1'b1; #20
+Shift_op=2'b10; Shift_amount=5'b10101; Shift_in=32'h876aabde; Carry_flag=1'b1; #20
+Shift_op=2'b10; Shift_amount=5'b11111; Shift_in=32'h9689afed; Carry_flag=1'b1; #20
+// the SHift_amount equals to 0;
+Shift_op=2'b10; Shift_amount=5'b00000; Shift_in=32'h7768cbed; Carry_flag=1'b1; #20
+Shift_op=2'b10; Shift_amount=5'b00000; Shift_in=32'h98af98e7; Carry_flag=1'b1; #20
+// circle right Shift 
+Shift_op=2'b11; Shift_amount=5'b00001; Shift_in=32'habecdf79; Carry_flag=1'b1; #20
+Shift_op=2'b11; Shift_amount=5'b00011; Shift_in=32'h76580a98; Carry_flag=1'b1; #20
+Shift_op=2'b11; Shift_amount=5'b00101; Shift_in=32'h8769723e; Carry_flag=1'b1; #20
+Shift_op=2'b11; Shift_amount=5'b11111; Shift_in=32'habcedf82; Carry_flag=1'b1; #20
+Shift_op=2'b11; Shift_amount=5'b00000; Shift_in=32'hf3abeffa; Carry_flag=1'b1; #20
+Shift_op=2'b11; Shift_amount=5'b00000; Shift_in=32'hfab875a7; Carry_flag=1'b0; #20                                                   
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

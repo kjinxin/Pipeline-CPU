@@ -1,0 +1,108 @@
+// Copyright (C) 1991-2012 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "04/07/2014 15:07:32"
+                                                                                
+// Verilog Test Bench template for design : lab1_121220307_ARM32
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 us/ 1 ps
+module lab1_121220307_ARM32_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg [3:0] CPSR_byte_w_en;
+reg [31:0] CPSR_in;
+reg [31:0] PC_in;
+reg [3:0] Rd_byte_w_en;
+reg [31:0] Rd_in;
+reg [3:0] Rd_r_addr;
+reg [3:0] Rd_w_addr;
+reg [3:0] Rm_r_addr;
+reg [3:0] Rn_byte_w_en;
+reg [31:0] Rn_in;
+reg [3:0] Rn_r_addr;
+reg [3:0] Rn_w_addr;
+reg [3:0] Rs_r_addr;
+reg [3:0] SPSR_byte_w_en;
+reg [31:0] SPSR_in;
+reg clk;
+reg rst;
+// wires                                               
+wire [31:0]  CPSR_out;
+wire [4:0]  Mode_out;
+wire [31:0]  PC_out;
+wire [31:0]  Rd_out;
+wire [31:0]  Rm_out;
+wire [31:0]  Rn_out;
+wire [31:0]  Rs_out;
+wire [31:0]  SPSR_out;
+
+// assign statements (if any)                          
+lab1_121220307_ARM32 i1 (
+// port map - connection between master ports and signals/registers   
+	.CPSR_byte_w_en(CPSR_byte_w_en),
+	.CPSR_in(CPSR_in),
+	.CPSR_out(CPSR_out),
+	.Mode_out(Mode_out),
+	.PC_in(PC_in),
+	.PC_out(PC_out),
+	.Rd_byte_w_en(Rd_byte_w_en),
+	.Rd_in(Rd_in),
+	.Rd_out(Rd_out),
+	.Rd_r_addr(Rd_r_addr),
+	.Rd_w_addr(Rd_w_addr),
+	.Rm_out(Rm_out),
+	.Rm_r_addr(Rm_r_addr),
+	.Rn_byte_w_en(Rn_byte_w_en),
+	.Rn_in(Rn_in),
+	.Rn_out(Rn_out),
+	.Rn_r_addr(Rn_r_addr),
+	.Rn_w_addr(Rn_w_addr),
+	.Rs_out(Rs_out),
+	.Rs_r_addr(Rs_r_addr),
+	.SPSR_byte_w_en(SPSR_byte_w_en),
+	.SPSR_in(SPSR_in),
+	.SPSR_out(SPSR_out),
+	.clk(clk),
+	.rst(rst)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+
